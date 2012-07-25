@@ -1,0 +1,8 @@
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\bin\Debug\IntermediateForm.exe
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\bin\Debug\IntermediateForm.pdb
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.Properties.Resources.resources
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.exe
+E:\importantfile\CsharpandWinform\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.pdb

@@ -1,0 +1,8 @@
+E:\importantfile\CsharpandWinform\IPBox\IPBox\bin\Debug\IPBox.dll
+E:\importantfile\CsharpandWinform\IPBox\IPBox\bin\Debug\IPBox.pdb
+E:\importantfile\CsharpandWinform\IPBox\IPBox\obj\Debug\ResolveAssemblyReference.cache
+E:\importantfile\CsharpandWinform\IPBox\IPBox\obj\Debug\GenerateResource.read.1.tlog
+E:\importantfile\CsharpandWinform\IPBox\IPBox\obj\Debug\GenerateResource.write.1.tlog
+E:\importantfile\CsharpandWinform\IPBox\IPBox\obj\Debug\IPBox.dll
+E:\importantfile\CsharpandWinform\IPBox\IPBox\obj\Debug\IPBox.pdb
+E:\importantfile\CsharpandWinform\IPBox\IPBox\obj\Debug\IPBox.IPBox.resources
