@@ -16,3 +16,10 @@ E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\Interme
 E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.addCtrlAtRuntimeApp.resources
+E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.Calculator.resources
+E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.transparentWindow.resources
+E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.htmlMaker.resources
+E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.imageConvert.resources
+E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.textSearch.resources
+E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.displayFont.resources
+E:\projects\CompanyStudy\IntermediateForm\IntermediateForm\obj\x86\Debug\IntermediateForm.pingtu.resources
