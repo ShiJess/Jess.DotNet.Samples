@@ -15,5 +15,11 @@ namespace IntermediateForm
         {
             InitializeComponent();
         }
+
+        private void Exemple42_Click(object sender, EventArgs e)
+        {
+            addCtrlAtRuntimeApp frm = new addCtrlAtRuntimeApp();
+            frm.ShowDialog();
+        }
     }
 }

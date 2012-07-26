@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Exemple42 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // Exemple42
             // 
-            this.button1.Location = new System.Drawing.Point(45, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Exemple42.Location = new System.Drawing.Point(12, 12);
+            this.Exemple42.Name = "Exemple42";
+            this.Exemple42.Size = new System.Drawing.Size(260, 23);
+            this.Exemple42.TabIndex = 0;
+            this.Exemple42.Text = "实例42 在程序中添加控件";
+            this.Exemple42.UseVisualStyleBackColor = true;
+            this.Exemple42.Click += new System.EventHandler(this.Exemple42_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Exemple42);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -54,7 +55,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Exemple42;
     }
 }
 
