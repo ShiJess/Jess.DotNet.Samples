@@ -15,5 +15,19 @@ namespace NetProgramForm
         {
             InitializeComponent();
         }
+
+        private void Exemple51_Click(object sender, EventArgs e)
+        {
+            server frm = new server();
+            frm.ShowDialog();
+        }
+
+        private void Exemple52_Click(object sender, EventArgs e)
+        {
+            client frm = new client();
+            frm.ShowDialog();
+        }
+
+        
     }
 }
