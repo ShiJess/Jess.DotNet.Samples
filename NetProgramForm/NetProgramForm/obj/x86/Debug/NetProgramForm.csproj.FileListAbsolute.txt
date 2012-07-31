@@ -7,5 +7,7 @@ E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\GenerateRes
 E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.exe
 E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.pdb
-E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.client.resources
-E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.server.resources
+E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.EMailSender.resources
+E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.EmailNotifier.resources
+E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.EmailNotify.resources
+E:\projects\CompanyStudy\NetProgramForm\NetProgramForm\obj\x86\Debug\NetProgramForm.Webbrowse.resources

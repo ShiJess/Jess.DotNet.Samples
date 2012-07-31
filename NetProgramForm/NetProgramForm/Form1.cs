@@ -16,15 +16,22 @@ namespace NetProgramForm
             InitializeComponent();
         }
 
-        private void Exemple51_Click(object sender, EventArgs e)
+        private void Exemple63_Click(object sender, EventArgs e)
         {
-            server frm = new server();
+            EMailSender frm = new EMailSender();
             frm.ShowDialog();
         }
 
-        private void Exemple52_Click(object sender, EventArgs e)
+        private void Exemple64_Click(object sender, EventArgs e)
         {
-            client frm = new client();
+            EmailNotifier frm=new EmailNotifier();
+            //frm.ShowDialog();
+           // Application.Run(frm);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Webbrowse frm = new Webbrowse();
             frm.ShowDialog();
         }
 

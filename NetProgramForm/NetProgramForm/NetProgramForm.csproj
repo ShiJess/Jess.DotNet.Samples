@@ -36,6 +36,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="client.cs">
+    <Compile Include="EmailNotifier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="client.Designer.cs">
-      <DependentUpon>client.cs</DependentUpon>
+    <Compile Include="EmailNotifier.Designer.cs">
+      <DependentUpon>EmailNotifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailNotify.Designer.cs">
+      <DependentUpon>EmailNotify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMailSender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMailSender.Designer.cs">
+      <DependentUpon>EMailSender.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -60,14 +78,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="server.cs">
+    <Compile Include="Webbrowse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="server.Designer.cs">
-      <DependentUpon>server.cs</DependentUpon>
+    <Compile Include="Webbrowse.Designer.cs">
+      <DependentUpon>Webbrowse.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="client.resx">
-      <DependentUpon>client.cs</DependentUpon>
+    <EmbeddedResource Include="EmailNotifier.resx">
+      <DependentUpon>EmailNotifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailNotify.resx">
+      <DependentUpon>EmailNotify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMailSender.resx">
+      <DependentUpon>EMailSender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -81,8 +105,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="server.resx">
-      <DependentUpon>server.cs</DependentUpon>
+    <EmbeddedResource Include="Webbrowse.resx">
+      <DependentUpon>Webbrowse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
