@@ -1,0 +1,5 @@
+E:\projects\ThreadStudy\ThreadStudyThird-1\ThreadStudyThird-1\bin\Debug\ThreadStudyThird-1.exe
+E:\projects\ThreadStudy\ThreadStudyThird-1\ThreadStudyThird-1\bin\Debug\ThreadStudyThird-1.pdb
+E:\projects\ThreadStudy\ThreadStudyThird-1\ThreadStudyThird-1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\projects\ThreadStudy\ThreadStudyThird-1\ThreadStudyThird-1\obj\x86\Debug\ThreadStudyThird-1.exe
+E:\projects\ThreadStudy\ThreadStudyThird-1\ThreadStudyThird-1\obj\x86\Debug\ThreadStudyThird-1.pdb

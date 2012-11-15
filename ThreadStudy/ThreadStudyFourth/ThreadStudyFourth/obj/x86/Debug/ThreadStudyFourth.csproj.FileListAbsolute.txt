@@ -1,0 +1,5 @@
+E:\projects\ThreadStudy\ThreadStudyFourth\ThreadStudyFourth\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\projects\ThreadStudy\ThreadStudyFourth\ThreadStudyFourth\bin\Debug\ThreadStudyFourth.exe
+E:\projects\ThreadStudy\ThreadStudyFourth\ThreadStudyFourth\bin\Debug\ThreadStudyFourth.pdb
+E:\projects\ThreadStudy\ThreadStudyFourth\ThreadStudyFourth\obj\x86\Debug\ThreadStudyFourth.exe
+E:\projects\ThreadStudy\ThreadStudyFourth\ThreadStudyFourth\obj\x86\Debug\ThreadStudyFourth.pdb
