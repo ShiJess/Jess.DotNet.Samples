@@ -1,5 +1,0 @@
-E:\importantfile\CsharpandWinform\Hello\Hello\bin\Debug\Hello.exe
-E:\importantfile\CsharpandWinform\Hello\Hello\bin\Debug\Hello.pdb
-E:\importantfile\CsharpandWinform\Hello\Hello\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\importantfile\CsharpandWinform\Hello\Hello\obj\x86\Debug\Hello.exe
-E:\importantfile\CsharpandWinform\Hello\Hello\obj\x86\Debug\Hello.pdb

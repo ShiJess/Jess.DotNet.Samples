@@ -1,6 +1,0 @@
-E:\projects\UpdateFace_feature\UpdateFace_feature\bin\Release\UpdateFace_feature.exe.config
-E:\projects\UpdateFace_feature\UpdateFace_feature\bin\Release\UpdateFace_feature.exe
-E:\projects\UpdateFace_feature\UpdateFace_feature\bin\Release\UpdateFace_feature.pdb
-E:\projects\UpdateFace_feature\UpdateFace_feature\obj\x86\Release\ResolveAssemblyReference.cache
-E:\projects\UpdateFace_feature\UpdateFace_feature\obj\x86\Release\UpdateFace_feature.exe
-E:\projects\UpdateFace_feature\UpdateFace_feature\obj\x86\Release\UpdateFace_feature.pdb
