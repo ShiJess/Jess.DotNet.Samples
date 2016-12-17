@@ -13,6 +13,11 @@ namespace Hello_World
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             this.DispatcherUnhandledException += App_DispatcherUnhandledException;

@@ -1,4 +1,7 @@
 
+[001]: ../Resources/NewHelloWorld.png
+[002]: https://github.com/ShiJess/DotNetStudySamples/raw/master/WPF/Resources/NewHelloWorld.png
+
 > 个人开发环境 —— 按个人喜好选择：  
 > * IDE：Visual Studio Community 2015 —— 愿意尝鲜的可以试下VS2017
 > * System：Windows 8.1
@@ -11,7 +14,7 @@
 
 **操作步骤**：打开**Visual Studio** —— 依次点击**文件-新建-项目** —— 在弹出的**新建项目**对话框中的索引目录区域选择**已安装-模板-Visual C#-Windows** —— 选中对话框列表项中的**WPF 应用程序** —— 在对话框下方的名称中输入名称**Hello_World** —— 点击**确定**完成项目创建。
 
-![](../Resources/NewHelloWorld.png)
+![创建Hello，World项目][002]
 
 ### 项目结构说明
 
@@ -54,7 +57,7 @@ XAML文件是以.xaml为后缀的XML文件。其是为了简化UI的创建过程
 
     xmlns:别名="命名空间"
 
-其中默认命名空间可以省略“冒号”和“别名”，另，此处引用的命名空间与cs代码中的还有所不同，cs代码中只能一个空间一个空间引入，而此处的空间可以是多个程序集空间的集合 —— URL表示，当然也可以一个一个空间引入。
+其中默认命名空间可以省略“冒号”和“别名”，另，此处引用的命名空间与cs代码中的还有所不同，cs代码中只能一个空间一个空间引入，而此处的空间可以是多个命名空间的集合 —— URL表示，当然也可以一个一个空间引入。
 
 ### 类对应关系
 
