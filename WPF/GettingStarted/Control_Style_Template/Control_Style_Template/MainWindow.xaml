@@ -1,0 +1,32 @@
+﻿<Window x:Class="Control_Style_Template.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_Style_Template"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <Style x:Key="winbtn" TargetType="Button">
+            <Setter Property="Background" Value="Blue" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel>
+            <Button Content="样式设置">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Red" />
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Content="样式设置2" Style="{StaticResource winbtn}"></Button>
+            <Button Content="样式设置3" Style="{StaticResource stylebtn}" />
+            <TextBox x:Name="textBox" Text="触发器" Style="{StaticResource simpletrigger}" />
+            <TextBox Text="控件模板" Template="{StaticResource txt}" />
+            <TextBox Text="控件模板2" Template="{DynamicResource TextBoxControlTemplate1}"  />
+        </StackPanel>
+    </Grid>
+</Window>

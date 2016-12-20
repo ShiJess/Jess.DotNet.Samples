@@ -85,3 +85,5 @@ ScrollViewer也是一个常与布局组合使用的控件，与Border不同的�
 ## 上述内容继承结构
 
 <div style="width: 100%; max-width: 100%; margin-bottom:5px;"><a href="https://docs.com/smith-jess/6756/layoutpanel" title="LayoutPanel继承结构" target="_blank" style="font-family: 'Segoe UI'; font-size: 13px; text-decoration: none; margin-left:18px ">LayoutPanel继承结构</a><span style="font-family: 'Segoe UI'; font-size: 13px ">—</span><a href="https://docs.com/smith-jess" target="_blank" style="font-family: 'Segoe UI'; font-size: 13px; text-decoration: none ">Jess</a><a style="float: right; margin-bottom:5px; margin-right:18px; font-family: 'Segoe UI'; font-size: 13px; text-decoration: none " href="https://docs.com/smith-jess/6756/layoutpanel" target="_blank">Docs.com</a></div><iframe src="https://docs.com/d/embed/D25192036-0408-0710-9550-001908060826%7eM6635eff3-5641-f01f-ac6b-ffc6683826c9" frameborder="0" scrolling="no" width="100%" height="550px" style="max-width:100%" allowfullscreen="False"></iframe>
+
+***
