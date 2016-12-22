@@ -84,13 +84,159 @@ TemplateBinding可以简单理解为在Binding中设置了ElementName为其父�
 
 Binding除了以上内容，还有其他的属性设置，本小节将简要介绍几个较为常用的内容。
 
-### 数据格式化
+### 数据格式化转换
 
-数据格式化、
+在数据绑定中，有时我们需要显示的数据与源数据不一样，如时间格式，浮点数格式，或者更复杂一些的想要一个类对象中的多个属性组合一起显示。
+
+对于简单的数据格式化，可以通过StringFormat来处理，如时间格式化为`yyyy-MM-dd`，浮点数保留两位小数等等。其代码示例如下：
+
+后台类：
+
+    class SimpleDataConvert
+    {
+        public DateTime Date { get; set; } = DateTime.Now;
+        public float Price { get; set; } = 100.123456f;
+    }
+
+使用：
+
+    this.simpleconvert.DataContext = new SimpleDataConvert();
+
+界面处理：
+
+    <StackPanel x:Name="simpleconvert">
+        <TextBox Text="{Binding Date,StringFormat=yyyy-MM/dd}" />
+        <TextBlock Text="{Binding Price,StringFormat=f2}" />
+    </StackPanel>
+
+上述示例结果就是将Date日期格式化为`yyyy-MM/dd`；将Price保留两位小数显示。
+
+但是有些数据显示要求无法通过StringFormat处理，则需要使用Binding的属性Converter来处理了 —— 即通过值转换器来处理。下面我们以上面用到的时间转化为例，假如我们要在前台显示`yyyyMMdd`格式的日期，此时从数据源显示到界面可以正确处理，但是在界面输入，它无法正确转化为源数据，即内置的Converter不支持，此时我们就需要自己实现值转换，示例 如下：
+
+首先定义DateConverter，实现接口IValueConverter，代码如下：
+
+    class DateConverter : IValueConverter
+    {
+        /// <summary>
+        /// 数据源转界面显示
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns></returns>
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value.GetType() == typeof(System.DateTime))
+            {
+                return ((System.DateTime)value).ToString("yyyyMMdd");
+            }
+            else
+            {
+                return value;
+            }
+        }
+
+        /// <summary>
+        /// 界面显示转数据源
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns></returns>
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (targetType == typeof(System.DateTime) && value != null)
+            {
+                DateTime dt = DateTime.Now;
+                string valuestr = value.ToString();
+                if (DateTime.TryParse(valuestr, out dt))
+                {
+                    return dt;
+                }
+                else if (valuestr.Length == 8)
+                {
+                    string yearstr = valuestr.Substring(0, 4);
+                    string monthstr = valuestr.Substring(4, 2);
+                    string daystr = valuestr.Substring(6, 2);
+                    if (DateTime.TryParse(string.Format("{0}-{1}-{2}", yearstr, monthstr, daystr), out dt))
+                    {
+                        return dt;
+                    }
+                }
+            }
+            return value;
+        }
+    }
+
+然后在Xaml文件中添加引用：
+
+> 由于此处DateConvert直接定义在当前窗体类命名空间下，所以其已经默认添加了如下空间，如果定义在其他位置，则需要手动添加空间引用。
+
+    xmlns:local="clr-namespace:Binding_Demo"
+
+> 资源定义，以便于在控件中引用
+
+    <Window.Resources>
+        <local:DateConverter x:Key="dateconvert" />
+    </Window.Resources>
+
+最后，则将值转换器应用到控件上，代码如下：
+
+    <TextBox Text="{Binding Date,Converter={StaticResource dateconvert}}" />
+
+至此，一个简单的值转换器就完成了。
 
 ### 数据验证
 
-简单验证
+在绑定中的验证主要设计四个属性：
+
+* ValidatesOnDataErrors或者ValidatesOnNotifyDataErrors（WPF 4.5之后才有的）—— 与DataErrorValidationRule或NotifyDataErrorValidationRule组合使用
+* ValidatesOnExceptions —— 与ExceptionValidationRule组合使用
+* NotifyOnValidationError —— 控制是否触发Validation.Error事件，用于额外的内容处理
+* ValidationRules —— 验证规则，用于定义验证规则集合
+
+下面我们以异常验证规则来简要介绍验证规则的使用 —— 验证处理涉及的内容有很多，单此一节无法描述完整，故仅列举最简单的使用方式：
+
+首先是后台类的定义：
+
+
+    class ForExceptionValidate
+    {
+        private int max;
+        public int Max
+        {
+            get { return max; }
+            set
+            {
+                if (value > 100)
+                {
+                    throw new Exception("Max不能超过100");
+                }
+                max = value;
+            }
+        }
+    }
+
+    this.forvalidate.DataContext = new ForExceptionValidate();
+
+然后是界面使用：
+
+    <StackPanel x:Name="forvalidate">
+        <TextBox >
+            <TextBox.Text>
+                <Binding Path="Max" >
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule></ExceptionValidationRule>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+    </StackPanel>
+
+在此 示例 中，后台类中抛出的异常，会作为界面的验证结果来处理 —— 所以此处虽然没有明确使用异常捕获，但程序并 不会崩溃。
 
 ## 依赖属性
 
+最后，简要说下依赖属性，所有上面的绑定基础都需要靠依赖属性。所有需要绑定功能的属性都进行了对应依赖属性（System.Windows.DependencyProperty）定义。在WPF中，我们大部分时间是在用依赖属性 —— 各种绑定，而自己的定义依赖属性的情况相对较少，所以此处就不再介绍如何定义依赖属性 —— 作为入门介绍教程。

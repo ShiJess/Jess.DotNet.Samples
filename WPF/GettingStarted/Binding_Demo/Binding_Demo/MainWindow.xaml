@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Binding_Demo"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:DateConverter x:Key="dateconvert" />
+    </Window.Resources>
     <StackPanel>
         <TextBox Text="{Binding Path=A.B}" />
         <TextBox Text="{Binding A}" />
@@ -24,5 +27,24 @@
         <Grid x:Name="fordatabinding">
             <TextBox Text="{Binding Count}" />
         </Grid>
+
+        <Border Height="5" Background="Gray"></Border>
+        <StackPanel x:Name="simpleconvert">
+            <TextBox Text="{Binding Date,StringFormat=yyyy-MM/dd}" />
+            <TextBlock Text="{Binding Price,StringFormat=f2}" />
+
+            <TextBox Text="{Binding Date,Converter={StaticResource dateconvert}}" />
+        </StackPanel>
+        <StackPanel x:Name="forvalidate">
+            <TextBox >
+                <TextBox.Text>
+                    <Binding Path="Max" >
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule></ExceptionValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
     </StackPanel>
 </Window>
