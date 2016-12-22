@@ -1,0 +1,28 @@
+﻿<Window x:Class="Binding_Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binding_Demo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <TextBox Text="{Binding Path=A.B}" />
+        <TextBox Text="{Binding A}" />
+        <TextBox Text="{Binding A,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" />
+        <TextBox x:Name="templatebinding">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <TextBlock Text="{TemplateBinding Text}" />
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <Border Height="5" Background="Gray"></Border>
+        <Slider x:Name="slider" Maximum="100" />
+        <TextBox Text="{Binding ElementName=slider,Path=Value,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" />
+        <Border Height="5" Background="Gray"></Border>
+        <Grid x:Name="fordatabinding">
+            <TextBox Text="{Binding Count}" />
+        </Grid>
+    </StackPanel>
+</Window>
