@@ -1,19 +1,36 @@
 ﻿using System;
-class Class1
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace 练习4_1
 {
-    public int value = 0;
-}
-class Demo
-{
-    static void Main()
+    class A
     {
-        int x = 0;
-        int y = x;
-        y = 80;
-        Class1 ref1 = new Class1();
-        Class1 ref2 = ref1;
-        ref2.value = 80;
-        Console.WriteLine("Value:{0},{1}", x, y);
-        Console.WriteLine("Refs:{0},{1}", ref1.value, ref2.value);
+        public A()
+        {
+            PrintFields();
+        }
+        public virtual void PrintFields() { }
+    }
+    class B : A
+    {
+        int x = 1;
+        int y;
+        public B()
+        {
+            y = -1;
+        }
+        public override void PrintFields()
+        {
+            Console.WriteLine("x={0},y={1}", x, y);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            B b = new B();
+        }
     }
 }
