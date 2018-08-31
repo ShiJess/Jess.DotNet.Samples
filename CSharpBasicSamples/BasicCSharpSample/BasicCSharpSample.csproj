@@ -8,8 +8,8 @@
     <ProjectGuid>{DAC3BB0D-CDFF-4C54-84CE-165FA2C93A38}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>helloworld</RootNamespace>
-    <AssemblyName>helloworld</AssemblyName>
+    <RootNamespace>BasicCSharpSample</RootNamespace>
+    <AssemblyName>BasicCSharpSample</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
