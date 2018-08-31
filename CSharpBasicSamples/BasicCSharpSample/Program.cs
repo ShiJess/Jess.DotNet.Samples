@@ -1,14 +1,17 @@
 ﻿using System;
-public class format
+public class Demo
 {
-    public static void Main()
-    {
-        decimal x = 11111111.976M;
-        decimal y = 123456789123456789m;
-        Console.Write("结果是：");
-        Console.WriteLine("{0:C}", x);
-        Console.Write("结果是：");
-        Console.WriteLine("{0:C}", y);
 
+    public static int Main()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            Console.Write(i);//循环输出i的值
+        }
+        for (int i = 8; i > 0; i--)
+        {
+            Console.Write(i);//循环输出i的值
+        }
+        return 0;
     }
 }
