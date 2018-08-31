@@ -1,12 +1,19 @@
 ﻿using System;
-public class TestDecimalFormat
+class Class1
+{
+    public int value = 0;
+}
+class Demo
 {
     static void Main()
     {
-        decimal x = 0.999m;
-        decimal y = 9999999999999999999999999999m;
-        Console.WriteLine("My amount = {0:C}", x);
-        Console.WriteLine("Your amount = {0:C}", y);
+        int x = 0;
+        int y = x;
+        y = 80;
+        Class1 ref1 = new Class1();
+        Class1 ref2 = ref1;
+        ref2.value = 80;
+        Console.WriteLine("Value:{0},{1}", x, y);
+        Console.WriteLine("Refs:{0},{1}", ref1.value, ref2.value);
     }
 }
-
