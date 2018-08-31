@@ -1,8 +1,13 @@
 ﻿using System;
-public class GoodStudy
+public class ChengEr
 {
     public static void Main()
     {
-        Console.WriteLine("C#是一门值得学习的语言，我们可以学好它。");
+        int x;
+        //x = Console.Read()-48;//输入的为一位数
+        string z = Console.ReadLine();
+        x = Int32.Parse(z);
+        int y = x * 2;
+        Console.WriteLine("{0}乘以2后的结果为{1}", x, y);
     }
 }
