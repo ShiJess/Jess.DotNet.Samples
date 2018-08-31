@@ -1,11 +1,11 @@
 ﻿using System;
-class Booleans
+class Demo
 {
     public static void Main()
     {
-        bool content = true;
-        bool noContent = false;
-        Console.WriteLine("It is {0} that C# Station provides C# programming language content.", content);
-        Console.WriteLine("The statement above is not {0}.", noContent);
+        int val1 = 8;
+        float val2 = 17.6f;
+        short val3 = 12;
+        Console.WriteLine("结果是:{0}", val1 * val2 / val3);
     }
 }
