@@ -3,54 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace 示例3_3
+namespace _11
 {
-    //枚举定义性别
-    public enum Genders
+    public class GetAllZu            //创建类
     {
-        Female = 0,
-        Male = 1
-    }
-    public class Person
-    {
-        private String _Name;//姓名字段
-        public String Name//姓名属性
+        static int l = 1;                    //用于记录第几组数据
+        private int sum;
+        public int Sum                  //属性，设置和的值
         {
-            get
+            get                                //get此处可以省去
             {
-                return this._Name;
+                return sum;
             }
             set
             {
-                this._Name = value.Trim();
+                sum = value;
             }
         }
-        private int _Age;//年龄字段
-        public int Age//年龄属性
+        public void PrintAllZu()    //获得所有的组函数
         {
-            get
+            for (int i = 1; i <= sum; i++)
             {
-                return this._Age;
-            }
-            set
-            {
-                //如果年龄超出1-120，则用默认值20
-                if ((value > 120) || (value < 1))
-                    this._Age = 20;
+                int s = 0, j = i;          //注意s和j用到的范围
+                for (; s < sum; j++)
+                {
+                    s = s + j;
+                }
+                if (s == sum)
+                {
+                    Console.WriteLine("第{0}组的数据为：", l);
+                    for (int k = i; k < j; k++)
+                    {
+                        Console.Write("{0}  ", k);
+                    }
+                    Console.Write("\n");
+                    l++;                             //组数加1
+                }
                 else
-                    this._Age = value;
-            }
-        }
-        private Genders _Gender;
-        public Genders Gender
-        {
-            get
-            {
-                return this._Gender;
-            }
-            set
-            {
-                this._Gender = value;
+                    continue;
             }
         }
     }
@@ -58,15 +48,10 @@ namespace 示例3_3
     {
         static void Main(string[] args)
         {
-            Person aPerson = new Person();
-            aPerson.Name = "zhangsan";
-            aPerson.Gender = Genders.Male;
-            aPerson.Age = 30;
-            PrintPerson(aPerson);
-        }
-        static void PrintPerson(Person aPerson)
-        {
-            System.Console.WriteLine("姓名：{0}性别：{1}年龄：{2}", aPerson.Name, aPerson.Gender, aPerson.Age);
+            GetAllZu s1 = new GetAllZu();
+            Console.WriteLine("请输入若干数整数和的值为（以500为例）：");
+            s1.Sum = Convert.ToInt32(Console.ReadLine());
+            s1.PrintAllZu();
         }
     }
 }
