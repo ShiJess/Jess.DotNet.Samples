@@ -1,17 +1,12 @@
 ﻿using System;
-public class Demo
+public class TestDecimalFormat
 {
-
-    public static int Main()
+    static void Main()
     {
-        for (int i = 0; i < 7; i++)
-        {
-            Console.Write(i);//循环输出i的值
-        }
-        for (int i = 8; i > 0; i--)
-        {
-            Console.Write(i);//循环输出i的值
-        }
-        return 0;
+        decimal x = 0.999m;
+        decimal y = 9999999999999999999999999999m;
+        Console.WriteLine("My amount = {0:C}", x);
+        Console.WriteLine("Your amount = {0:C}", y);
     }
 }
+
