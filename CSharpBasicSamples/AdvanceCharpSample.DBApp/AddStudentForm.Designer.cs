@@ -418,6 +418,7 @@
             this.Name = "AddStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "创建学员用户";
+            this.Load += new System.EventHandler(this.AddStudentForm_Load);
             this.pnlState.ResumeLayout(false);
             this.pnlState.PerformLayout();
             this.pnlSex.ResumeLayout(false);

@@ -10,7 +10,8 @@ using System.Data.SqlClient;
 namespace MySchool
 {
     /// <summary>
-    /// 新增学员用户窗体    
+    /// 新增学员用户窗体
+    /// 第七章课堂案例示例1
     /// </summary>
     public partial class AddStudentForm : Form
     {
@@ -23,7 +24,40 @@ namespace MySchool
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }             
+        }
+
+        // 当窗体加载时发生,示例1
+        private void AddStudentForm_Load(object sender, EventArgs e)
+        {
+            string sql = "SELECT GradeName FROM Grade"; // 查询年级的sql语句
+            // 设置command命令执行的语句
+            SqlCommand command = new SqlCommand(sql, DBHelper.connection); 
+
+            try
+            {
+                DBHelper.connection.Open();  // 打开数据库连接
+                SqlDataReader dataReader = command.ExecuteReader();// 执行查询
+
+                string gradeName = "";  // 年级名称
+
+                // 循环读出所有的年级名，并添加到年级列表框中
+                while (dataReader.Read())
+                {
+                    gradeName = (string)dataReader["GradeName"];
+                    cboGrade.Items.Add(gradeName);
+                }
+                dataReader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("操作数据库出错");
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                DBHelper.connection.Close();
+            }
+        }        
         
         /// <summary>
         /// 验证窗体输入
