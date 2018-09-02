@@ -83,6 +83,12 @@
     <Compile Include="MyMessageForm.Designer.cs">
       <DependentUpon>MyMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyNotePadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyNotePadForm.Designer.cs">
+      <DependentUpon>MyNotePadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddStudentForm.resx">
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyMessageForm.resx">
       <DependentUpon>MyMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyNotePadForm.resx">
+      <DependentUpon>MyNotePadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

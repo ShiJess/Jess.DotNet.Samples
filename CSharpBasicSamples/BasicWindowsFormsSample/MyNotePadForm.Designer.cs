@@ -1,16 +1,16 @@
 ﻿namespace MyNotePad
 {
-    partial class Form1
+    partial class MyNotePadForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// 必需的设计器变量。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// 清理所有正在使用的资源。
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows 窗体设计器生成的代码
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// 设计器支持所需的方法 - 不要
+        /// 使用代码编辑器修改此方法的内容。
         /// </summary>
         private void InitializeComponent()
         {
@@ -32,7 +32,7 @@
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtEdit = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,39 +51,39 @@
             // mnuFile
             // 
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(50, 20);
+            this.mnuFile.Size = new System.Drawing.Size(41, 20);
             this.mnuFile.Text = "文件";
             // 
             // mnuEdit
             // 
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(50, 20);
+            this.mnuEdit.Size = new System.Drawing.Size(41, 20);
             this.mnuEdit.Text = "编辑";
             // 
             // mnuHelp
             // 
             this.mnuHelp.Name = "mnuHelp";
-            this.mnuHelp.Size = new System.Drawing.Size(50, 20);
+            this.mnuHelp.Size = new System.Drawing.Size(41, 20);
             this.mnuHelp.Text = "帮助";
             // 
-            // richTextBox1
+            // txtEdit
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 24);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(377, 276);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.txtEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEdit.Location = new System.Drawing.Point(0, 24);
+            this.txtEdit.Multiline = true;
+            this.txtEdit.Name = "txtEdit";
+            this.txtEdit.Size = new System.Drawing.Size(377, 276);
+            this.txtEdit.TabIndex = 1;
             // 
-            // Form1
+            // MyNotePadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 300);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtEdit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MyNotePadForm";
             this.Text = "我的记事本";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -98,7 +98,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuFile;
         private System.Windows.Forms.ToolStripMenuItem mnuEdit;
         private System.Windows.Forms.ToolStripMenuItem mnuHelp;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtEdit;
     }
 }
 

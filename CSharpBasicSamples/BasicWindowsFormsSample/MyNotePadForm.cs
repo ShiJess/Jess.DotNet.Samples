@@ -1,17 +1,19 @@
-锘縰sing System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace MyNotePad
 {
-    public partial class Form1 : Form
+    /// <summary>
+    /// 本示例演示dock属性
+    /// </summary>
+    public partial class MyNotePadForm : Form
     {
-        public Form1()
+        public MyNotePadForm()
         {
             InitializeComponent();
         }

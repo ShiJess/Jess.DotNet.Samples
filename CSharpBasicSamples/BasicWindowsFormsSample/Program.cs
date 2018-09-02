@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace MyMessage
+namespace MyNotePad
 {
     static class Program
     {
@@ -14,7 +14,7 @@ namespace MyMessage
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyMessageForm());
+            Application.Run(new MyNotePadForm());
         }
     }
 }
