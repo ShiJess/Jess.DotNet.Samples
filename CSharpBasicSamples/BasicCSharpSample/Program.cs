@@ -1,13 +1,18 @@
 ﻿using System;
-public class ChengEr
+using System.Collections.Generic;
+using System.Text;
+
+namespace HelloWangyexx
 {
-    public static void Main()
+    /// <summary>
+    /// 此示例演示第一个 C# 程序
+    /// </summary>
+    class Program
     {
-        int x;
-        //x = Console.Read()-48;//输入的为一位数
-        string z = Console.ReadLine();
-        x = Int32.Parse(z);
-        int y = x * 2;
-        Console.WriteLine("{0}乘以2后的结果为{1}", x, y);
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello Wangyexx .NET");
+            Console.ReadLine();
+        }
     }
 }
