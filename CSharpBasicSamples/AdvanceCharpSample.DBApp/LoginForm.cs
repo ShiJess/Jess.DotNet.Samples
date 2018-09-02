@@ -11,7 +11,7 @@ namespace MySchool
 {
     /// <summary>
     /// 登录窗体
-    /// 第6章课堂案例示例4
+    /// 第六章课堂案例示例5
     /// </summary>
     public partial class LoginForm : Form
     {
@@ -41,7 +41,7 @@ namespace MySchool
                     txtLogInId.Text, 
                     txtLogInPwd.Text, 
                     ref message);
-                
+
                 // 如果是合法用户，显示相应的窗体
                 if (isValidUser) 
                 {
@@ -63,7 +63,10 @@ namespace MySchool
             }
         }
 
-        // 验证用户是否进行了输入和选择       
+        /// <summary>
+        /// 验证用户是否进行了输入和选择
+        /// </summary>
+        /// <returns>验证成功返回True，失败返回False</returns>
         private bool ValidateInput()
         {
             if (txtLogInId.Text.Trim() == "")
@@ -90,15 +93,100 @@ namespace MySchool
             }            
         }
 
-        // 验证用户输入的用户名和密码是否正确
+        // 示例5
         // 验证的结果有两种情况：通过和不通过，返回值为布尔型
-        // 不通过的原因可能有多种，在方法的参数中的message字符串，用以标识不通过的情况        
+        // 不通过的原因可能有多种，在方法的参数中增加消息字符串，用以标识不通过的情况
+        /// <summary>
+        /// 验证用户输入的用户名和密码是否正确
+        /// </summary>
+        /// <param name="loginType">登录类型</param>
+        /// <param name="loginId">登录用户名</param>
+        /// <param name="loginPwd">登录密码</param>
+        /// <param name="message">验证不通过的提示信息</param>
+        /// <returns>true：验证通过。false：验证失败</returns>
         public bool ValidateUser(string loginType, string loginId, string loginPwd, ref string message)
         {
-            return true;
+            int count = 0;             // 数据库查询的结果
+            bool isValidUser = false;  // 返回值，是否找到该用户
+
+            // 查询是否存在匹配的用户名和密码
+            if (loginType == "管理员")  // 判断管理员用户
+            {
+                // 查询用sql语句
+                string sql = string.Format(
+                    "SELECT COUNT(*) FROM Admin WHERE LogInId='{0}' AND LogInPwd='{1}'", loginId, loginPwd
+                ); 
+
+                try
+                {
+                    // 创建Command命令
+                    SqlCommand command = new SqlCommand(sql, DBHelper.connection);  
+                    DBHelper.connection.Open();  // 打开连接
+
+                    count = (int)command.ExecuteScalar();  // 执行查询语句
+
+                    // 如果找到1个，验证通过，否则是非法用户
+                    if (count == 1)
+                    {
+                        isValidUser = true;
+                    }                    
+                    else
+                    {
+                        message = "用户名或密码不存在！";
+                        isValidUser = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    message = ex.Message;
+                    Console.WriteLine(ex.Message); // 出现异常，打印异常消息
+                }
+                finally
+                {
+                    DBHelper.connection.Close(); // 关闭数据库连接
+                }
+            }
+            else if (loginType == "学员")
+            {
+                // 查询用sql语句
+                string sql = string.Format(
+                    "SELECT COUNT(*) FROM Student WHERE LogInId='{0}' AND LogInPwd='{1}'",txtLogInId, txtLogInPwd
+                );        
+
+                try
+                {
+                    SqlCommand command = new SqlCommand(sql, DBHelper.connection);  // 查询命令   
+                    DBHelper.connection.Open();  // 打开连接
+
+                    count = (int)command.ExecuteScalar();  // 执行查询语句
+
+                    // 如果没有找到，则是非法用户
+                    if (count == 1)
+                    {
+                        isValidUser = true;
+                    }
+                    else
+                    {
+                        message = "用户名或密码不存在！";
+                        isValidUser = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message); ;
+                }
+                finally
+                {
+                    DBHelper.connection.Close();  // 关闭数据库连接
+                }
+            }
+
+            return isValidUser;
         }
 
-        // 根据登录类型，显示相应的窗体
+        /// <summary>
+        /// 根据登录类型，显示相应的窗体
+        /// </summary>
         public void ShowUserForm()
         {
             switch (cboLogInType.Text)

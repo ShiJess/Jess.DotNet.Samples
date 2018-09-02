@@ -28,7 +28,7 @@ namespace MySchool
         /// <summary>
         /// 验证窗体输入
         /// </summary>
-        /// <returns></returns>
+        /// <returns>验证成功返回True，失败返回False</returns>
         private bool ValidateInput()
         {
             if (txtLoginId.Text == "")  // 验证是否输入了用户名 
@@ -86,6 +86,6 @@ namespace MySchool
                 return false;
             }
             return true;
-        } 
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace MySchool
             // 创建新建用户窗体
             AddStudentForm addStudentForm = new AddStudentForm();
             addStudentForm.MdiParent = this;  // 设置父窗体
-            addStudentForm.Show();  // 显示新建用户窗体
+            addStudentForm.Show();           // 显示新建用户窗体
         }
 
         // “关于MySchool”菜单项的Click事件处理
