@@ -5,33 +5,25 @@ using System.Text;
 namespace HelloWangyexx
 {
     /// <summary>
-    /// 此程序演示二重循环应用
+    /// 本示例演示利用二重循环打印直角三角形
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
+            int rows = 5;  // 打印的行数
             int i, j;      // 循环变量
-            int sum = 0;   // 总分
-            int average;   // 平均分
-            int score;     // 输入的分数
 
-            // 外层循环控制逐个计算每个班级
-            for (i = 0; i < 3; i++)
+            // 外层循环控制打印的行数
+            for (i = 1; i <= rows; i++)
             {
-                sum = 0;  // 总分计数清零
-                Console.WriteLine("\n请输入第{0}个班的成绩", i + 1);
-                // 内层循环计算每个班级的总分
-                for (j = 0; j < 4; j++)
+                // 内层循环控制每行打印*的个数
+                for (j = 1; j <= i; j++)
                 {
-                    Console.Write("第{0}个学员的成绩：", j + 1);
-                    score = int.Parse(Console.ReadLine());
-                    sum = sum + score;
+                    Console.Write("*");  // 打印一个 *
                 }
-                average = sum / 4;
-                Console.WriteLine("第{0}个班的平均分为：{1}分", i + 1, average);
+                Console.WriteLine();     // 打印完一行之后换行
             }
-
             Console.ReadLine();
         }
     }
