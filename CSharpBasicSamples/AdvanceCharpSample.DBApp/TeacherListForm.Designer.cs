@@ -36,6 +36,7 @@
             this.colTeacherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +103,17 @@
             this.colBirthday.HeaderText = "生日";
             this.colBirthday.Name = "colBirthday";
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdate.Location = new System.Drawing.Point(463, 299);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "保存修改";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -120,6 +132,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(630, 330);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvTeacher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -136,6 +149,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTeacher;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoginId;

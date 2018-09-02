@@ -36,7 +36,7 @@ namespace MySchool
             picAnimation.Image = ilAnimation.Images[index];
         }
 
-        // 图片框的单击事件处理方法，点击时关闭窗体
+        // 图片框的单击事件处理方法，单击时关闭窗体
         private void picOK_Click(object sender, EventArgs e)
         {
             this.Close();

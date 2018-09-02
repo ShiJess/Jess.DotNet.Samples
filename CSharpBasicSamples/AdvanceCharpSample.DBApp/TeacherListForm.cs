@@ -11,7 +11,7 @@ namespace MySchool
 {
     /// <summary>
     /// 教员信息列表窗体
-    /// 学生用书第八章示例2
+    /// 学生用书第八章示例3
     /// </summary>
     public partial class TeacherListForm : Form
     {
@@ -38,7 +38,18 @@ namespace MySchool
             // 绑定DataGridView的数据源
             dgvTeacher.DataSource = dataSet.Tables["Teacher"];
         }        
-                
+
+        // 单击“保存修改”按钮时，将数据集的更改提交到数据库
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确实要将修改保存到数据库吗?","操作提示",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                SqlCommandBuilder builder = new SqlCommandBuilder(dataAdapter);
+                dataAdapter.Update(dataSet, "Teacher");
+            }            
+        }
+
         // 单击“关闭”按钮时,关闭窗体
         private void btnClose_Click(object sender, EventArgs e)
         {
