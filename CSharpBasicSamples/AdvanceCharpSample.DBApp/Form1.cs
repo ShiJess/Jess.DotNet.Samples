@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 namespace OpenCloseDB
 {
     /// <summary>
-    /// 本示例演示打开和关闭数据库，并使用异常处理。
+    /// 本示例演示使用ExecuteScalar()方法查询学员表中学员信息的数量。
     /// </summary>
     public partial class Form1 : Form
     {
@@ -19,28 +19,39 @@ namespace OpenCloseDB
             InitializeComponent();
         }
 
-        // 测试打开数据库的操作，理解finally
+        // 打开数据库连接，查询学员记录数量
         private void btnTest_Click(object sender, EventArgs e)
         {
+            // 创建 Connection 对象
             string connString = "Data Source=.;Initial Catalog=MySchool;User ID=sa;pwd=sa";
             SqlConnection connection = new SqlConnection(connString);
+
+            int num = 0;  // 选员信息的数量
+            string message = "";  // 弹出的结果消息
+            // 查询用的 SQL 语句
+            string sql = "SELECT COUNT(*) FROM Student";
+
             try
             {
-                // 打开成功
-                connection.Open();
-                MessageBox.Show("打开数据库连接成功");                
+                connection.Open();// 打开数据库连接
+                // 创建 Command 对象
+                SqlCommand command = new SqlCommand(sql, connection);
+                // 执行 SQL 查询
+                num = (int)command.ExecuteScalar();
+
+                message = string.Format("Student表中共有{0}条学员信息！",num);
+                MessageBox.Show(message,"查询结果",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             }
-            catch (Exception ex)
+            catch (Exception exp)
             {
-                // 打开失败
-                MessageBox.Show("出现异常");
-                Console.WriteLine(ex.Message);
+                // 操作出错
+                MessageBox.Show(exp.Message);
             }
             finally
             {
-                // 关闭数据库
-                connection.Close();
-                MessageBox.Show("关闭数据库连接成功");
+                // 关闭数据库连接
+                connection.Close();                
             }
         }
     }
