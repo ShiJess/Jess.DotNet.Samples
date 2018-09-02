@@ -108,7 +108,7 @@ namespace MySchool
                 {
                     // 创建Command对象
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);
-                    DBHelper.connection.Open();  // 打开数据库连接
+                    DBHelper.connection.Open();          // 打开数据库连接
                     result = command.ExecuteNonQuery();  // 执行命令                        
                 }
                 catch (Exception ex)
@@ -149,7 +149,7 @@ namespace MySchool
                 {
                     // 创建Command对象
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);
-                    DBHelper.connection.Open();  // 打开数据库连接
+                    DBHelper.connection.Open();          // 打开数据库连接
                     result = command.ExecuteNonQuery();  // 执行命令                        
                 }
                 catch (Exception ex)
@@ -194,7 +194,7 @@ namespace MySchool
 
                 SqlDataReader dataReader = command.ExecuteReader();  // 执行查询用户命令
 
-                lvStudent.Items.Clear();  // 清除ListView中的所有项
+                lvStudent.Items.Clear();    // 清除ListView中的所有项
 
                 // 如果结果中没有数据行，就弹出提示，
                 if (!dataReader.HasRows)
@@ -214,7 +214,7 @@ namespace MySchool
                         userState = (userStateId == 1) ? "活动" : "非活动";
 
                         ListViewItem lviStudent = new ListViewItem(loginId);//创建一个ListView项
-                        lviStudent.Tag = (int)dataReader["StudentID"];  // 将ID放在Tag中
+                        lviStudent.Tag = (int)dataReader["StudentID"];      // 将ID放在Tag中
                         lvStudent.Items.Add(lviStudent); // 向ListView中添加一个新项
                         lviStudent.SubItems.AddRange(new string[] { studentName, studentNO, userState });//向当前项中添加子项
                     }

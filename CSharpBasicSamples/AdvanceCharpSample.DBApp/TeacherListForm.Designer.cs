@@ -38,6 +38,7 @@
             this.colBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnReFresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +107,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdate.Location = new System.Drawing.Point(463, 299);
+            this.btnUpdate.Location = new System.Drawing.Point(382, 299);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 1;
@@ -125,12 +126,24 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnReFresh
+            // 
+            this.btnReFresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReFresh.Location = new System.Drawing.Point(463, 299);
+            this.btnReFresh.Name = "btnReFresh";
+            this.btnReFresh.Size = new System.Drawing.Size(75, 23);
+            this.btnReFresh.TabIndex = 2;
+            this.btnReFresh.Text = "刷新";
+            this.btnReFresh.UseVisualStyleBackColor = true;
+            this.btnReFresh.Click += new System.EventHandler(this.btnFresh_Click);
+            // 
             // TeacherListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(630, 330);
+            this.Controls.Add(this.btnReFresh);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvTeacher);
@@ -151,6 +164,7 @@
         private System.Windows.Forms.DataGridView dgvTeacher;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnReFresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoginId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoginPwd;

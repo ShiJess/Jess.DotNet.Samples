@@ -58,7 +58,7 @@ namespace MySchool
             aboutForm.ShowDialog();   // 打开关于窗体，显示为模式窗口
         }
         
-        // 单击时，打开查询学员用户窗体
+        // 打开查询学员用户窗体
         private void tsmiSearchStudent_Click(object sender, EventArgs e)
         {
             SearchStudentForm searchStudentForm = new SearchStudentForm();//创建窗体对象
@@ -72,6 +72,14 @@ namespace MySchool
             TeacherListForm teacherListForm = new TeacherListForm(); // 创建教师信息窗体
             teacherListForm.MdiParent = this;  // 指定 MDI 父窗体
             teacherListForm.Show();            // 显示窗体
-        }    
+        }
+
+        // 用户单击批量查看学员用户时，显示学员信息列表窗体   
+        private void tsmiStudentList_Click(object sender, EventArgs e)
+        {
+            StudentListForm studentListForm = new StudentListForm();  // 创建修改学员用户窗体
+            studentListForm.MdiParent = this; 　// 设置MDI父窗体为当前窗体
+            studentListForm.Show();　           // 显示学员信息列表窗体
+        }        
     }
 }

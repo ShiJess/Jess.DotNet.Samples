@@ -11,7 +11,6 @@ namespace MySchool
 {
     /// <summary>
     /// 教员信息列表窗体
-    /// 学生用书第八章示例3
     /// </summary>
     public partial class TeacherListForm : Form
     {
@@ -50,10 +49,17 @@ namespace MySchool
             }            
         }
 
-        // 单击“关闭”按钮时,关闭窗体
+        // 单击关闭按钮时,关闭窗体
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // 单击“刷新”按钮时，重新填充数据集
+        private void btnFresh_Click(object sender, EventArgs e)
+        {
+            dataSet.Tables["Teacher"].Clear();    // 清空原来的数据
+            dataAdapter.Fill(dataSet,"Teacher");  // 重新填充
         }
     }
 }

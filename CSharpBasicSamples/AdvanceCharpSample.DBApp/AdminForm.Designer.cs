@@ -130,8 +130,9 @@
             // tsmiStudentList
             // 
             this.tsmiStudentList.Name = "tsmiStudentList";
-            this.tsmiStudentList.Size = new System.Drawing.Size(152, 22);
+            this.tsmiStudentList.Size = new System.Drawing.Size(142, 22);
             this.tsmiStudentList.Text = "学员信息列表";
+            this.tsmiStudentList.Click += new System.EventHandler(this.tsmiStudentList_Click);
             // 
             // tsmiTeacherList
             // 
@@ -240,6 +241,7 @@
             this.tsbtnStudentList.Name = "tsbtnStudentList";
             this.tsbtnStudentList.Size = new System.Drawing.Size(105, 28);
             this.tsbtnStudentList.Text = "学员信息列表";
+            this.tsbtnStudentList.Click += new System.EventHandler(this.tsmiStudentList_Click);
             // 
             // tsbtnTeacherList
             // 
