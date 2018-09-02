@@ -181,6 +181,7 @@
             this.ClientSize = new System.Drawing.Size(611, 400);
             this.Controls.Add(this.msAdmin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.msAdmin;
             this.Name = "AdminForm";
             this.Text = "MySchool-管理员";

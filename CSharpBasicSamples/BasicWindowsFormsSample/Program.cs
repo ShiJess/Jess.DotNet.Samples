@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace MyNotePad
+namespace MySchool
 {
     static class Program
     {
@@ -14,7 +14,7 @@ namespace MyNotePad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyNotePadForm());
+            Application.Run(new AdminForm());
         }
     }
 }
