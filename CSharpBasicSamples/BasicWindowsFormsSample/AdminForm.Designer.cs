@@ -45,8 +45,18 @@
             this.tsmiWindows = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsAdmin = new System.Windows.Forms.ToolStrip();
+            this.tsddbNewUser = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsbtnNewStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbtnNewTeacher = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbtnSearchStudent = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnStudentList = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnTeacherList = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnQuestion = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnExam = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.msAdmin.SuspendLayout();
+            this.tsAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // msAdmin
@@ -169,6 +179,85 @@
             this.tsmiAbout.Size = new System.Drawing.Size(166, 22);
             this.tsmiAbout.Text = "关于考试管理系统";
             // 
+            // tsAdmin
+            // 
+            this.tsAdmin.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.tsAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsddbNewUser,
+            this.tsbtnSearchStudent,
+            this.tsbtnStudentList,
+            this.tsbtnTeacherList,
+            this.tsbtnQuestion,
+            this.tsbtnExam});
+            this.tsAdmin.Location = new System.Drawing.Point(0, 24);
+            this.tsAdmin.Name = "tsAdmin";
+            this.tsAdmin.Size = new System.Drawing.Size(611, 31);
+            this.tsAdmin.TabIndex = 1;
+            this.tsAdmin.Text = "管理员工具";
+            // 
+            // tsddbNewUser
+            // 
+            this.tsddbNewUser.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnNewStudent,
+            this.tsbtnNewTeacher});
+            this.tsddbNewUser.Image = ((System.Drawing.Image)(resources.GetObject("tsddbNewUser.Image")));
+            this.tsddbNewUser.Name = "tsddbNewUser";
+            this.tsddbNewUser.Size = new System.Drawing.Size(90, 28);
+            this.tsddbNewUser.Text = "新增用户";
+            // 
+            // tsbtnNewStudent
+            // 
+            this.tsbtnNewStudent.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnNewStudent.Image")));
+            this.tsbtnNewStudent.Name = "tsbtnNewStudent";
+            this.tsbtnNewStudent.Size = new System.Drawing.Size(142, 22);
+            this.tsbtnNewStudent.Text = "新增学员用户";
+            this.tsbtnNewStudent.Click += new System.EventHandler(this.tsmiNewStudent_Click);
+            // 
+            // tsbtnNewTeacher
+            // 
+            this.tsbtnNewTeacher.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnNewTeacher.Image")));
+            this.tsbtnNewTeacher.Name = "tsbtnNewTeacher";
+            this.tsbtnNewTeacher.Size = new System.Drawing.Size(142, 22);
+            this.tsbtnNewTeacher.Text = "新增教员用户";
+            // 
+            // tsbtnSearchStudent
+            // 
+            this.tsbtnSearchStudent.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSearchStudent.Image")));
+            this.tsbtnSearchStudent.Name = "tsbtnSearchStudent";
+            this.tsbtnSearchStudent.Size = new System.Drawing.Size(117, 28);
+            this.tsbtnSearchStudent.Text = "查询及修改学员";
+            // 
+            // tsbtnStudentList
+            // 
+            this.tsbtnStudentList.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnStudentList.Image")));
+            this.tsbtnStudentList.Name = "tsbtnStudentList";
+            this.tsbtnStudentList.Size = new System.Drawing.Size(105, 28);
+            this.tsbtnStudentList.Text = "学员信息列表";
+            // 
+            // tsbtnTeacherList
+            // 
+            this.tsbtnTeacherList.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnTeacherList.Image")));
+            this.tsbtnTeacherList.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnTeacherList.Name = "tsbtnTeacherList";
+            this.tsbtnTeacherList.Size = new System.Drawing.Size(105, 28);
+            this.tsbtnTeacherList.Text = "教员信息列表";
+            // 
+            // tsbtnQuestion
+            // 
+            this.tsbtnQuestion.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnQuestion.Image")));
+            this.tsbtnQuestion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnQuestion.Name = "tsbtnQuestion";
+            this.tsbtnQuestion.Size = new System.Drawing.Size(81, 28);
+            this.tsbtnQuestion.Text = "题库管理";
+            // 
+            // tsbtnExam
+            // 
+            this.tsbtnExam.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnExam.Image")));
+            this.tsbtnExam.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnExam.Name = "tsbtnExam";
+            this.tsbtnExam.Size = new System.Drawing.Size(81, 28);
+            this.tsbtnExam.Text = "考试管理";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -179,6 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 400);
+            this.Controls.Add(this.tsAdmin);
             this.Controls.Add(this.msAdmin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -189,6 +279,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.msAdmin.ResumeLayout(false);
             this.msAdmin.PerformLayout();
+            this.tsAdmin.ResumeLayout(false);
+            this.tsAdmin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,14 +295,23 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
         private System.Windows.Forms.ToolStripMenuItem tsmiSearchStudent;
         private System.Windows.Forms.ToolStripMenuItem tsmiWindows;
+        private System.Windows.Forms.ToolStrip tsAdmin;
+        private System.Windows.Forms.ToolStripButton tsbtnStudentList;
+        private System.Windows.Forms.ToolStripButton tsbtnSearchStudent;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tsmiNewStudent;
         private System.Windows.Forms.ToolStripMenuItem tsmiNewTeacher;
+        private System.Windows.Forms.ToolStripButton tsbtnQuestion;
+        private System.Windows.Forms.ToolStripDropDownButton tsddbNewUser;
+        private System.Windows.Forms.ToolStripMenuItem tsbtnNewStudent;
+        private System.Windows.Forms.ToolStripMenuItem tsbtnNewTeacher;
+        private System.Windows.Forms.ToolStripButton tsbtnExam;
         private System.Windows.Forms.ToolStripMenuItem tsmiQuestion;
         private System.Windows.Forms.ToolStripMenuItem tsmiExam;
         private System.Windows.Forms.ToolStripMenuItem tsmiAbout;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
+        private System.Windows.Forms.ToolStripButton tsbtnTeacherList;
         private System.Windows.Forms.ToolStripMenuItem tsmiStudentList;
         private System.Windows.Forms.ToolStripMenuItem tsmiTeacherList;
     }
