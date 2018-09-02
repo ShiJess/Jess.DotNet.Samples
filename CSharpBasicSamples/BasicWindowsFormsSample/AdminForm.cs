@@ -21,7 +21,13 @@ namespace MySchool
         // 用户单击退出菜单项时，退出应用程序
         private void tsmiExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();  // 退出应用程序           
+            DialogResult choice;　　// 用户的选择
+            choice = MessageBox.Show("确定要退出吗？", "退出系统", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            if (choice == DialogResult.OK)
+            {
+                Application.Exit();  // 退出应用程序
+            }            
         }
 
         // 用户单击创建用户菜单项时，出现新建用户窗口
