@@ -4,37 +4,33 @@ using System.Text;
 
 namespace HelloWangyexx
 {
-    // 此示例演示使用方法计算税后工资
+    /// <summary>
+    /// 此示例演示使用方法交换两个数
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            int pay;      // 税前工资  
-            float taxRate = 0.1f;  // 税率
-            float afterTax;  // 税后工资
-            Console.WriteLine("请输入税前工资：");
-            pay = int.Parse(Console.ReadLine());
+            int num1, num2;
+            Console.WriteLine("请输入两个数字：");
+            num1 = int.Parse(Console.ReadLine());
+            num2 = int.Parse(Console.ReadLine());
 
-            // 调用方法计算税后工资
-            afterTax = GetPay(pay, taxRate);
-            Console.WriteLine("税前工资{0}，税后工资{1}", pay, afterTax);
+            Console.WriteLine("交换前两个数的分别为：{0}和{1}", num1, num2);
 
+            // 交换两个数的值
+            Swap(ref num1, ref num2);
+
+            Console.WriteLine("交换后两个数的分别为：{0}和{1}", num1, num2);
             Console.ReadLine();
         }
 
-        // 此方法根据税前工资计算税后工资
-        private static float GetPay(int pay, float taxRate)
+        private static void Swap(ref int num1, ref int num2)
         {
-            float afterTax;  // 计税后的工资
-            if (pay <= 1600)  // 低于1600不缴税
-            {
-                afterTax = pay;
-            }
-            else   // 高于1600 部分按税率缴税
-            {
-                afterTax = pay - (pay - 1600) * taxRate;
-            }
-            return afterTax;
+            int temp;      // 中间变量
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
         }
     }
 }
