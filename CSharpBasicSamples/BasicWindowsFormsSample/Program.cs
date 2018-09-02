@@ -1,9 +1,8 @@
-﻿using MySchool;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace MyForm
+namespace MySchool
 {
     static class Program
     {
@@ -15,7 +14,7 @@ namespace MyForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminForm());
+            Application.Run(new AddStudentForm());
         }
     }
 }
