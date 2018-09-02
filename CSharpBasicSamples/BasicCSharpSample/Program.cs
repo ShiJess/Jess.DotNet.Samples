@@ -5,36 +5,38 @@ using System.Text;
 namespace HelloWangyexx
 {
     /// <summary>
-    /// 此代码演示如何使用switch语句
+    /// 此示例演示贯穿 case 的break
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            string name1 = "张三";    // 第一个学员姓名
-            string name2 = "李四";    // 第二个学员姓名
-            string subject1 = "C#";   // 第一个学员考试科目
-            string subject2 = "Java"; // 第二个学员考试科目
-            int score1 = 91;          // 第一个学员考试分数
-            int score2 = 89;          // 第二个学员考试分数
+            Console.WriteLine("请输入当前的时间：");
+            string time = Console.ReadLine(); // 接受输入
 
-            // 输入提示
-            Console.WriteLine("请选择输出哪个学员的信息：张三 / 李四");
-
-            string choice = Console.ReadLine();  // 接收输入
-
-            // 判断输入，选择输出
-            Console.WriteLine("姓名\t科目\t成绩");
-            switch (choice)
+            switch (time)　　// 根据时间输出
             {
-                case "张三":
-                    Console.WriteLine("{0}\t{1}\t{2}", name1, subject1, score1);
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "10":
+                    Console.WriteLine("上午好");
                     break;
-                case "李四":
-                    Console.WriteLine("{0}\t{1}\t{2}", name2, subject2, score2);
+                case "11":
+                case "12":
+                case "13":
+                    Console.WriteLine("中午好");
+                    break;
+                case "14":
+                case "15":
+                case "16":
+                case "17":
+                case "18":
+                    Console.WriteLine("下午好");
                     break;
                 default:
-                    Console.WriteLine("抱歉！没有你要找的学员！");
+                    Console.WriteLine("休息时间");
                     break;
             }
 
