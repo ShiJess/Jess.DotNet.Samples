@@ -144,6 +144,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -403,6 +404,7 @@
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(156, 20);
             this.cboGrade.TabIndex = 11;
+            this.cboGrade.SelectedIndexChanged += new System.EventHandler(this.cboGrade_SelectedIndexChanged);
             // 
             // AddStudentForm
             // 

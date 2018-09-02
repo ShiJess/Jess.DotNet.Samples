@@ -19,13 +19,13 @@ namespace MySchool
             InitializeComponent();
         }
 
-        // 点击取消按钮，关闭应用程序
+        // 单击“取消”按钮，关闭应用程序
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        // 点击登录按钮时，设置用户名和登录类型
+        // 单击“登录”按钮时，设置用户名和登录类型
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             bool isValidUser = false;   // 标识是否为合法用户
@@ -65,6 +65,7 @@ namespace MySchool
         /// <summary>
         /// 验证用户是否进行了输入和选择
         /// </summary>
+        /// <returns>验证成功返回True，失败返回False</returns>
         private bool ValidateInput()
         {
             if (txtLogInId.Text.Trim() == "")
@@ -103,7 +104,7 @@ namespace MySchool
         /// <returns>true：验证通过。false：验证失败</returns>
         public bool ValidateUser(string loginType, string loginId, string loginPwd, ref string message)
         {
-            int count = 0;        // 数据库查询的结果
+            int count = 0;             // 数据库查询的结果
             bool isValidUser = false;  // 返回值，是否找到该用户
 
             // 查询是否存在匹配的用户名和密码
