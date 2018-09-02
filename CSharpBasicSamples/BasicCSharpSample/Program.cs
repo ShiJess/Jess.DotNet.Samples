@@ -4,48 +4,37 @@ using System.Text;
 
 namespace HelloWangyexx
 {
-    /// <summary>
-    /// 本程序演示使用二重循环实现数组的冒泡排序算法
-    /// </summary>
+    // 此示例演示使用方法计算税后工资
     class Program
     {
         static void Main(string[] args)
         {
-            int[] scores = new int[5];
-            int i, j;  // 循环变量
-            int temp;  // 临时变量
+            int pay;      // 税前工资  
+            float taxRate = 0.1f;  // 税率
+            float afterTax;  // 税后工资
+            Console.WriteLine("请输入税前工资：");
+            pay = int.Parse(Console.ReadLine());
 
-            // 读入成绩
-            Console.WriteLine("请输入5个学员的成绩：");
-            for (i = 0; i < 5; i++)
-            {
-                Console.WriteLine("请输入第{0}个学员的成绩：", i + 1);
-                scores[i] = int.Parse(Console.ReadLine());//类型转换  
-            }
-
-            // 开始排序
-            for (i = 0; i < scores.Length - 1; i++)
-            {
-                for (j = 0; j < scores.Length - 1 - i; j++)
-                {
-                    if (scores[j] > scores[j + 1])
-                    {
-                        // 交换元素
-                        temp = scores[j];
-                        scores[j] = scores[j + 1];
-                        scores[j + 1] = temp;
-                    }
-                }
-            }
-
-            // 排序后输出
-            Console.WriteLine("排序后的成绩为：");
-            for (i = 0; i < 5; i++)
-            {
-                Console.Write("{0}\t", scores[i]);
-            }
+            // 调用方法计算税后工资
+            afterTax = GetPay(pay, taxRate);
+            Console.WriteLine("税前工资{0}，税后工资{1}", pay, afterTax);
 
             Console.ReadLine();
+        }
+
+        // 此方法根据税前工资计算税后工资
+        private static float GetPay(int pay, float taxRate)
+        {
+            float afterTax;  // 计税后的工资
+            if (pay <= 1600)  // 低于1600不缴税
+            {
+                afterTax = pay;
+            }
+            else   // 高于1600 部分按税率缴税
+            {
+                afterTax = pay - (pay - 1600) * taxRate;
+            }
+            return afterTax;
         }
     }
 }
