@@ -5,32 +5,43 @@ using System.Text;
 namespace HelloWangyexx
 {
     /// <summary>
-    /// 此示例演示向控制台输出学员信息，在一行当中使用多个{0}、{1}...
+    /// 此程序演示如何使用嵌套 if 结构
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            string name1;  // 第一个学员姓名
-            string name2;  // 第二个学员姓名
-            int age1;      // 第一个学员年龄
-            int age2;      // 第二个学员年龄            
+            int price = 4000;  // 机票的原价
+            int month;         // 出行的月份
+            int type;          // 头等舱为1,经济舱为2
 
-            // 输入第一个学员提示
-            Console.WriteLine("请输入第一个学员的姓名：");
-            name1 = Console.ReadLine();
-            Console.WriteLine("请输入第一个学员的年龄：");
-            age1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("请输入您出行的月份：1-12");
+            month = int.Parse(Console.ReadLine());
+            Console.WriteLine("请问您选择头等舱还是经济舱？头等舱输入1，经济舱输入2");
+            type = int.Parse(Console.ReadLine());
 
-            // 输入第二个学员提示
-            Console.WriteLine("请输入第二个学员的姓名：");
-            name2 = Console.ReadLine();
-            Console.WriteLine("请输入第二个学员的年龄：");
-            age2 = int.Parse(Console.ReadLine());
-
-            // 输出学员信息
-            Console.WriteLine("第一个学员的姓名" + name1 + ",年龄" + age1 + "岁");
-            Console.WriteLine("第二个学员的姓名{0},年龄{1}岁", name2, age2);
+            if (month >= 5 && month <= 10)  // 旺季
+            {
+                if (type == 1)        // 头等舱
+                {
+                    Console.WriteLine("您的机票价格为：{0}", price * 0.9);
+                }
+                else if (type == 2)  // 经济舱
+                {
+                    Console.WriteLine("您的机票价格为：{0}", price * 0.75);
+                }
+            }
+            else  // 淡季
+            {
+                if (type == 1)       // 头等舱
+                {
+                    Console.WriteLine("您的机票价格为：{0}", price * 0.6);
+                }
+                else if (type == 2)  // 经济舱
+                {
+                    Console.WriteLine("您的机票价格为：{0}", price * 0.3);
+                }
+            }
 
             Console.ReadLine();
         }
