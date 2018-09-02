@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace MySchool
 {
     /// <summary>
-    /// 管理员主窗体
+    /// 管理员主窗体    
     /// </summary>
     public partial class AdminForm : Form
     {
