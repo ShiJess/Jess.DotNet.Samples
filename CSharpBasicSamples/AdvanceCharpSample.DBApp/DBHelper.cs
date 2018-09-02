@@ -1,19 +1,17 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using System.Data.SqlClient;
+using System.Data.OleDb;
 
-namespace MySchool
+namespace ConnectionAccess
 {
-    /// <summary>
-    /// ´ËÀàÎ¬»¤Êı¾İ¿âÁ¬½Ó×Ö·û´®£¬ºÍ Connection ¶ÔÏó
-    /// </summary>
     class DBHelper
     {
-        // Êı¾İ¿âÁ¬½Ó×Ö·û´®
-        private static string connString = "Data Source=.;Initial Catalog=MySchool;User ID=sa;Pwd=sa";
-
-        // Êı¾İ¿âÁ¬½Ó Connection ¶ÔÏó
-        public static SqlConnection connection = new SqlConnection(connString); 
+        //Accessæ•°æ®åº“çš„è¿æ¥å­—ç¬¦ä¸²
+        public static string conn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+Environment.CurrentDirectory+"\\MySchool.mdb"; 
+         
+        //åˆ›å»ºconnectionå¯¹è±¡
+        public static OleDbConnection connection = new OleDbConnection(conn);
     }
 }

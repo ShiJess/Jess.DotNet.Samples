@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
-namespace MySchool
+namespace ConnectionAccess
 {
     static class Program
     {
@@ -14,7 +15,7 @@ namespace MySchool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentListForm());
+            Application.Run(new ShowInfo());
         }
     }
 }
