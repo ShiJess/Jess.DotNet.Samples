@@ -55,8 +55,11 @@
             this.tsbtnQuestion = new System.Windows.Forms.ToolStripButton();
             this.tsbtnExam = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.slblAdmin = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ssAdmin = new System.Windows.Forms.StatusStrip();
             this.msAdmin.SuspendLayout();
             this.tsAdmin.SuspendLayout();
+            this.ssAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // msAdmin
@@ -263,11 +266,28 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
+            // slblAdmin
+            // 
+            this.slblAdmin.Name = "slblAdmin";
+            this.slblAdmin.Size = new System.Drawing.Size(65, 17);
+            this.slblAdmin.Text = "管理员窗口";
+            // 
+            // ssAdmin
+            // 
+            this.ssAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.slblAdmin});
+            this.ssAdmin.Location = new System.Drawing.Point(0, 378);
+            this.ssAdmin.Name = "ssAdmin";
+            this.ssAdmin.Size = new System.Drawing.Size(611, 22);
+            this.ssAdmin.TabIndex = 2;
+            this.ssAdmin.Text = "管理员窗口";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 400);
+            this.Controls.Add(this.ssAdmin);
             this.Controls.Add(this.tsAdmin);
             this.Controls.Add(this.msAdmin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -281,6 +301,8 @@
             this.msAdmin.PerformLayout();
             this.tsAdmin.ResumeLayout(false);
             this.tsAdmin.PerformLayout();
+            this.ssAdmin.ResumeLayout(false);
+            this.ssAdmin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +321,8 @@
         private System.Windows.Forms.ToolStripButton tsbtnStudentList;
         private System.Windows.Forms.ToolStripButton tsbtnSearchStudent;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripStatusLabel slblAdmin;
+        private System.Windows.Forms.StatusStrip ssAdmin;
         private System.Windows.Forms.ToolStripMenuItem tsmiNewStudent;
         private System.Windows.Forms.ToolStripMenuItem tsmiNewTeacher;
         private System.Windows.Forms.ToolStripButton tsbtnQuestion;
