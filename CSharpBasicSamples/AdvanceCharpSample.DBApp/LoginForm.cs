@@ -65,6 +65,7 @@ namespace MySchool
         /// <summary>
         /// 验证用户是否进行了输入和选择
         /// </summary>
+        /// <returns>验证成功返回True，失败返回False</returns>
         private bool ValidateInput()
         {
             if (txtLogInId.Text.Trim() == "")
@@ -118,7 +119,7 @@ namespace MySchool
                 {
                     // 创建Command命令
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);  
-                    DBHelper.connection.Open();  // 打开连接
+                    DBHelper.connection.Open();            // 打开连接
 
                     count = (int)command.ExecuteScalar();  // 执行查询语句
 
@@ -153,7 +154,7 @@ namespace MySchool
                 try
                 {
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);  // 查询命令   
-                    DBHelper.connection.Open();  // 打开连接
+                    DBHelper.connection.Open();            // 打开连接
 
                     count = (int)command.ExecuteScalar();  // 执行查询语句
 

@@ -145,7 +145,7 @@
             this.mnuModify,
             this.mnuDelete});
             this.cmsStudent.Name = "contextMenuStrip1";
-            this.cmsStudent.Size = new System.Drawing.Size(153, 70);
+            this.cmsStudent.Size = new System.Drawing.Size(143, 48);
             // 
             // mnuModify
             // 
@@ -153,7 +153,7 @@
             this.mnuActive,
             this.mnuInActive});
             this.mnuModify.Name = "mnuModify";
-            this.mnuModify.Size = new System.Drawing.Size(152, 22);
+            this.mnuModify.Size = new System.Drawing.Size(142, 22);
             this.mnuModify.Text = "修改用户状态";
             // 
             // mnuActive
@@ -173,8 +173,9 @@
             // mnuDelete
             // 
             this.mnuDelete.Name = "mnuDelete";
-            this.mnuDelete.Size = new System.Drawing.Size(152, 22);
+            this.mnuDelete.Size = new System.Drawing.Size(142, 22);
             this.mnuDelete.Text = "删除";
+            this.mnuDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
             // SearchStudentForm
             // 
