@@ -9,14 +9,20 @@ using System.Windows.Forms;
 namespace MySchool
 {
     /// <summary>
-    /// 管理员主窗体
+    /// 管理员主窗体    
     /// </summary>
     public partial class AdminForm : Form
     {
         public AdminForm()
         {
             InitializeComponent();
-        }       
+        }
+
+        // 关闭窗体时，退出应用程序
+        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
 
         // 用户单击退出菜单项时，退出应用程序
         private void tsmiExit_Click(object sender, EventArgs e)
@@ -35,7 +41,8 @@ namespace MySchool
         {
             // 创建新建用户窗体
             AddStudentForm addStudentForm = new AddStudentForm();
+            addStudentForm.MdiParent = this;  // 设置父窗体
             addStudentForm.Show();  // 显示新建用户窗体
-        }         
+        }
     }
 }

@@ -42,7 +42,9 @@
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiQuestion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExam = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiWindows = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.msAdmin.SuspendLayout();
             this.SuspendLayout();
@@ -53,10 +55,12 @@
             this.tsmiUser,
             this.tsmiQuestion,
             this.tsmiExam,
+            this.tsmiWindows,
             this.tsmiHelp});
             this.msAdmin.Location = new System.Drawing.Point(0, 0);
+            this.msAdmin.MdiWindowListItem = this.tsmiWindows;
             this.msAdmin.Name = "msAdmin";
-            this.msAdmin.Size = new System.Drawing.Size(597, 24);
+            this.msAdmin.Size = new System.Drawing.Size(611, 24);
             this.msAdmin.TabIndex = 0;
             this.msAdmin.Text = "管理员菜单";
             // 
@@ -78,7 +82,7 @@
             this.tsmiNewStudent,
             this.tsmiNewTeacher});
             this.tsmiNewUser.Name = "tsmiNewUser";
-            this.tsmiNewUser.Size = new System.Drawing.Size(166, 22);
+            this.tsmiNewUser.Size = new System.Drawing.Size(154, 22);
             this.tsmiNewUser.Text = "新增用户";
             // 
             // tsmiNewStudent
@@ -97,8 +101,8 @@
             // tsmiSearchStudent
             // 
             this.tsmiSearchStudent.Name = "tsmiSearchStudent";
-            this.tsmiSearchStudent.Size = new System.Drawing.Size(166, 22);
-            this.tsmiSearchStudent.Text = "查询及修改该学员";
+            this.tsmiSearchStudent.Size = new System.Drawing.Size(154, 22);
+            this.tsmiSearchStudent.Text = "查询及修改学员";
             // 
             // tsmiUserList
             // 
@@ -106,7 +110,7 @@
             this.tsmiStudentList,
             this.tsmiTeacherList});
             this.tsmiUserList.Name = "tsmiUserList";
-            this.tsmiUserList.Size = new System.Drawing.Size(166, 22);
+            this.tsmiUserList.Size = new System.Drawing.Size(154, 22);
             this.tsmiUserList.Text = "用户信息列表";
             // 
             // tsmiStudentList
@@ -124,12 +128,12 @@
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(163, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(151, 6);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(166, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(154, 22);
             this.tsmiExit.Text = "退出";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -145,11 +149,25 @@
             this.tsmiExam.Size = new System.Drawing.Size(65, 20);
             this.tsmiExam.Text = "考试管理";
             // 
+            // tsmiWindows
+            // 
+            this.tsmiWindows.Name = "tsmiWindows";
+            this.tsmiWindows.Size = new System.Drawing.Size(41, 20);
+            this.tsmiWindows.Text = "窗口";
+            // 
             // tsmiHelp
             // 
+            this.tsmiHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAbout});
             this.tsmiHelp.Name = "tsmiHelp";
             this.tsmiHelp.Size = new System.Drawing.Size(41, 20);
             this.tsmiHelp.Text = "帮助";
+            // 
+            // tsmiAbout
+            // 
+            this.tsmiAbout.Name = "tsmiAbout";
+            this.tsmiAbout.Size = new System.Drawing.Size(166, 22);
+            this.tsmiAbout.Text = "关于考试管理系统";
             // 
             // toolStripSeparator1
             // 
@@ -160,13 +178,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 351);
+            this.ClientSize = new System.Drawing.Size(611, 400);
             this.Controls.Add(this.msAdmin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msAdmin;
             this.Name = "AdminForm";
             this.Text = "MySchool-管理员";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.msAdmin.ResumeLayout(false);
             this.msAdmin.PerformLayout();
             this.ResumeLayout(false);
@@ -182,11 +201,13 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiUserList;
         private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
         private System.Windows.Forms.ToolStripMenuItem tsmiSearchStudent;
+        private System.Windows.Forms.ToolStripMenuItem tsmiWindows;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tsmiNewStudent;
         private System.Windows.Forms.ToolStripMenuItem tsmiNewTeacher;
         private System.Windows.Forms.ToolStripMenuItem tsmiQuestion;
         private System.Windows.Forms.ToolStripMenuItem tsmiExam;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAbout;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
         private System.Windows.Forms.ToolStripMenuItem tsmiStudentList;

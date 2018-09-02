@@ -25,21 +25,12 @@ namespace MySchool
         }
 
         // 点击登录按钮时，设置用户名和登录类型
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogIn_Click(object sender, EventArgs e)
         {
-            if (txtLoginId.Text == "")
+            if (txtLogInId.Text.Trim() == "")
             {
-                DialogResult result;
-                result = MessageBox.Show("请输入用户姓名", "输入提示",
-                        MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                if (result == DialogResult.OK)
-                {
-                    MessageBox.Show("你选择了确认按钮");
-                }
-                else
-                {
-                    MessageBox.Show("你选择了取消按钮");
-                }
+                MessageBox.Show("请输入用户名", "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtLogInId.Focus();               
             }
         }       
     }

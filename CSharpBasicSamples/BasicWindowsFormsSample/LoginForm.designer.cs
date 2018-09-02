@@ -29,39 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.txtLoginId = new System.Windows.Forms.TextBox();
-            this.txtLoginPwd = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtLogInId = new System.Windows.Forms.TextBox();
+            this.txtLogInPwd = new System.Windows.Forms.TextBox();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.cboLoginType = new System.Windows.Forms.ComboBox();
+            this.cboLogInType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // txtLoginId
+            // txtLogInId
             // 
-            this.txtLoginId.Location = new System.Drawing.Point(214, 148);
-            this.txtLoginId.Name = "txtLoginId";
-            this.txtLoginId.Size = new System.Drawing.Size(122, 21);
-            this.txtLoginId.TabIndex = 0;
+            this.txtLogInId.Location = new System.Drawing.Point(214, 148);
+            this.txtLogInId.Name = "txtLogInId";
+            this.txtLogInId.Size = new System.Drawing.Size(122, 21);
+            this.txtLogInId.TabIndex = 0;
             // 
-            // txtLoginPwd
+            // txtLogInPwd
             // 
-            this.txtLoginPwd.Location = new System.Drawing.Point(214, 182);
-            this.txtLoginPwd.Name = "txtLoginPwd";
-            this.txtLoginPwd.PasswordChar = '*';
-            this.txtLoginPwd.Size = new System.Drawing.Size(122, 21);
-            this.txtLoginPwd.TabIndex = 1;
+            this.txtLogInPwd.Location = new System.Drawing.Point(214, 182);
+            this.txtLogInPwd.Name = "txtLogInPwd";
+            this.txtLogInPwd.PasswordChar = '*';
+            this.txtLogInPwd.Size = new System.Drawing.Size(122, 21);
+            this.txtLogInPwd.TabIndex = 1;
             // 
-            // btnLogin
+            // btnLogIn
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLogin.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnLogin.Location = new System.Drawing.Point(142, 262);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(86, 30);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "登　录";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogIn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogIn.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnLogIn.Location = new System.Drawing.Point(142, 262);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(86, 30);
+            this.btnLogIn.TabIndex = 3;
+            this.btnLogIn.Text = "登　录";
+            this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btnCancel
             // 
@@ -76,33 +76,33 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // cboLoginType
+            // cboLogInType
             // 
-            this.cboLoginType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboLoginType.FormattingEnabled = true;
-            this.cboLoginType.Items.AddRange(new object[] {
+            this.cboLogInType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLogInType.FormattingEnabled = true;
+            this.cboLogInType.Items.AddRange(new object[] {
             "管理员",
             "学员",
             "教员"});
-            this.cboLoginType.Location = new System.Drawing.Point(214, 217);
-            this.cboLoginType.Name = "cboLoginType";
-            this.cboLoginType.Size = new System.Drawing.Size(122, 20);
-            this.cboLoginType.TabIndex = 2;
+            this.cboLogInType.Location = new System.Drawing.Point(214, 217);
+            this.cboLogInType.Name = "cboLogInType";
+            this.cboLogInType.Size = new System.Drawing.Size(122, 20);
+            this.cboLogInType.TabIndex = 2;
             // 
             // LoginForm
             // 
-            this.AcceptButton = this.btnLogin;
+            this.AcceptButton = this.btnLogIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(496, 300);
-            this.Controls.Add(this.cboLoginType);
+            this.Controls.Add(this.cboLogInType);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtLoginPwd);
-            this.Controls.Add(this.txtLoginId);
+            this.Controls.Add(this.btnLogIn);
+            this.Controls.Add(this.txtLogInPwd);
+            this.Controls.Add(this.txtLogInId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -117,10 +117,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtLoginId;
-        private System.Windows.Forms.TextBox txtLoginPwd;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox txtLogInId;
+        private System.Windows.Forms.TextBox txtLogInPwd;
+        private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox cboLoginType;
+        private System.Windows.Forms.ComboBox cboLogInType;
     }
 }
