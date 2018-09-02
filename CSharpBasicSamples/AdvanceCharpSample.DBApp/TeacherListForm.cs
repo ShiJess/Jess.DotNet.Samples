@@ -11,12 +11,12 @@ namespace MySchool
 {
     /// <summary>
     /// 教员信息列表窗体
-    /// 学生用书第八章示例1
+    /// 学生用书第八章示例2
     /// </summary>
     public partial class TeacherListForm : Form
     {
         private DataSet dataSet = new DataSet();　　// 声明并初始化DataSet
-        private SqlDataAdapter dataAdapter;　　     // 声明DataAdapter
+        private SqlDataAdapter dataAdapter;　　　　 // 声明DataAdapter
         
         public TeacherListForm()
         {
@@ -35,12 +35,14 @@ namespace MySchool
             // 填充 DataSet
             dataAdapter.Fill(dataSet, "Teacher");
 
-            // 打印数据集中 Teacher 表
-            foreach (DataRow row in dataSet.Tables[0].Rows)
-            {
-                Console.WriteLine("{0}\t{1}\t{2}",
-                    row["TeacherId"], row["TeacherName"],row["Sex"]);
-            }
-        } 
+            // 绑定DataGridView的数据源
+            dgvTeacher.DataSource = dataSet.Tables["Teacher"];
+        }        
+                
+        // 单击“关闭”按钮时,关闭窗体
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

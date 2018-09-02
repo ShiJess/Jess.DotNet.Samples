@@ -108,7 +108,7 @@ namespace MySchool
                 {
                     // 创建Command对象
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);
-                    DBHelper.connection.Open();          // 打开数据库连接
+                    DBHelper.connection.Open();  // 打开数据库连接
                     result = command.ExecuteNonQuery();  // 执行命令                        
                 }
                 catch (Exception ex)
@@ -149,7 +149,7 @@ namespace MySchool
                 {
                     // 创建Command对象
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);
-                    DBHelper.connection.Open();          // 打开数据库连接
+                    DBHelper.connection.Open();  // 打开数据库连接
                     result = command.ExecuteNonQuery();  // 执行命令                        
                 }
                 catch (Exception ex)

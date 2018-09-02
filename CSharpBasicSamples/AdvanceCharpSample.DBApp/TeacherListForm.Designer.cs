@@ -29,7 +29,89 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherListForm));
+            this.dgvTeacher = new System.Windows.Forms.DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoginId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoginPwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTeacherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClose = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvTeacher
+            // 
+            this.dgvTeacher.AllowUserToAddRows = false;
+            this.dgvTeacher.AllowUserToResizeColumns = false;
+            this.dgvTeacher.AllowUserToResizeRows = false;
+            this.dgvTeacher.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvTeacher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTeacher.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeacher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
+            this.colLoginId,
+            this.colLoginPwd,
+            this.colTeacherName,
+            this.colSex,
+            this.colBirthday});
+            this.dgvTeacher.Location = new System.Drawing.Point(12, 12);
+            this.dgvTeacher.Name = "dgvTeacher";
+            this.dgvTeacher.RowTemplate.Height = 23;
+            this.dgvTeacher.Size = new System.Drawing.Size(606, 278);
+            this.dgvTeacher.TabIndex = 0;
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "TeacherID";
+            this.colId.HeaderText = "Id";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            this.colId.Visible = false;
+            // 
+            // colLoginId
+            // 
+            this.colLoginId.DataPropertyName = "LoginId";
+            this.colLoginId.HeaderText = "用户名";
+            this.colLoginId.Name = "colLoginId";
+            // 
+            // colLoginPwd
+            // 
+            this.colLoginPwd.DataPropertyName = "LoginPwd";
+            this.colLoginPwd.HeaderText = "密码";
+            this.colLoginPwd.Name = "colLoginPwd";
+            // 
+            // colTeacherName
+            // 
+            this.colTeacherName.DataPropertyName = "TeacherName";
+            this.colTeacherName.HeaderText = "姓名";
+            this.colTeacherName.Name = "colTeacherName";
+            // 
+            // colSex
+            // 
+            this.colSex.DataPropertyName = "Sex";
+            this.colSex.HeaderText = "性别";
+            this.colSex.Name = "colSex";
+            this.colSex.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colBirthday
+            // 
+            this.colBirthday.DataPropertyName = "Birthday";
+            this.colBirthday.HeaderText = "生日";
+            this.colBirthday.Name = "colBirthday";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClose.Location = new System.Drawing.Point(544, 299);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "关闭";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // TeacherListForm
             // 
@@ -37,6 +119,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(630, 330);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.dgvTeacher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -44,11 +128,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "教员信息列表";
             this.Load += new System.EventHandler(this.TeacherListForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgvTeacher;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLoginId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLoginPwd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTeacherName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBirthday;
     }
 }
