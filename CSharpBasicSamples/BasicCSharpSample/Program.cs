@@ -5,43 +5,27 @@ using System.Text;
 namespace HelloWangyexx
 {
     /// <summary>
-    /// 此示例演示 String 类的 Format 方法
-    /// 输出一段个人信息
+    /// 此示例演示使用 Convert 进行不同类型之间的转换
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            string name;  // 姓名            
-            string birthday;  // 出生年月
-            int height;  // 身高
-            string bloodType;  // 血型
-            string planet;  // 星座
-            string favourFood;  // 最喜欢的食物
-            string record;  // 个人档案
+            double myDouble = 85.63; // 原始数值
+            int myInt;  // 转换后的整型
+            float myFloat;  // 转换后的浮点型            
+            string myString;  // 转换后的字符串
 
-            Console.WriteLine("你好，欢迎来到 C# 世界！");
-            Console.WriteLine("请输入你的个人信息，我将为你建立个人档案！");
-            Console.Write("姓名：");
-            name = Console.ReadLine();
-            Console.Write("出生年月（*年*月格式）：");
-            birthday = Console.ReadLine();
-            Console.Write("身高(cm)：");
-            height = int.Parse(Console.ReadLine());
-            Console.Write("血型：");
-            bloodType = Console.ReadLine();
-            Console.Write("星座：");
-            planet = Console.ReadLine();
-            Console.Write("最喜欢的食物：");
-            favourFood = Console.ReadLine();
+            Console.WriteLine("原始数值为 double 类型：{0}", myDouble);
+            // 开始转换
+            myInt = Convert.ToInt32(myDouble); // 转换为整型
+            myFloat = Convert.ToSingle(myDouble);  // 转换为浮点型            
+            myString = Convert.ToString(myDouble); // 转换为字符串
 
-            record = string.Format(
-                "姓名：{0}\n出生年月：{1}\n身高：{2}\n血型：{3}\n星座：{4}\n最喜欢的食物：{5}",
-                name, birthday, height, bloodType, planet, favourFood);
-
-            Console.WriteLine("\n这是你的个人档案：");
-            Console.WriteLine(record);
-
+            // 输出
+            Console.WriteLine("转换后：");
+            Console.WriteLine("int\tfloat\tstring");
+            Console.WriteLine("{0}\t{1}\t{2}", myInt, myFloat, myString);
             Console.ReadLine();
         }
     }
