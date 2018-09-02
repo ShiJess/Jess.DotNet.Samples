@@ -119,7 +119,7 @@ namespace MySchool
                 {
                     // 创建Command命令
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);  
-                    DBHelper.connection.Open();            // 打开连接
+                    DBHelper.connection.Open();  // 打开连接
 
                     count = (int)command.ExecuteScalar();  // 执行查询语句
 
@@ -154,7 +154,7 @@ namespace MySchool
                 try
                 {
                     SqlCommand command = new SqlCommand(sql, DBHelper.connection);  // 查询命令   
-                    DBHelper.connection.Open();            // 打开连接
+                    DBHelper.connection.Open();  // 打开连接
 
                     count = (int)command.ExecuteScalar();  // 执行查询语句
 

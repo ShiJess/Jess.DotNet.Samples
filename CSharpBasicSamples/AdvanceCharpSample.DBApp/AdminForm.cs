@@ -64,6 +64,14 @@ namespace MySchool
             SearchStudentForm searchStudentForm = new SearchStudentForm();//创建窗体对象
             searchStudentForm.MdiParent = this;  // 设置MDI父窗体
             searchStudentForm.Show();            // 显示窗体
+        }
+
+        // 用户单击查看教师信息时，显示教师信息列表窗体    
+        private void tsmiTeacherList_Click(object sender, EventArgs e)
+        {
+            TeacherListForm teacherListForm = new TeacherListForm(); // 创建教师信息窗体
+            teacherListForm.MdiParent = this;  // 指定 MDI 父窗体
+            teacherListForm.Show();            // 显示窗体
         }    
     }
 }

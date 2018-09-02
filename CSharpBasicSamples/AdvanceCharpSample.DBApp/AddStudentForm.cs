@@ -85,7 +85,6 @@ namespace MySchool
         private void AddStudentForm_Load(object sender, EventArgs e)
         {
             string sql = "SELECT GradeName FROM Grade"; // 查询年级的sql语句
-
             // 设置command命令执行的语句
             SqlCommand command = new SqlCommand(sql, DBHelper.connection); 
 
@@ -125,11 +124,9 @@ namespace MySchool
                 int gradeId = -1;
                 // 查询GradeID 的sql语句
                 string sql = "SELECT GradeId FROM Grade WHERE GradeName='" + cboGrade.Text + "'"; 
-                
                 // 定义command对象
                 SqlCommand command = new SqlCommand(sql, DBHelper.connection);  
                 SqlDataReader dataReader;
-
                 try
                 {
                     DBHelper.connection.Open();
@@ -161,7 +158,7 @@ namespace MySchool
                     DBHelper.connection.Open();
                     dataReader = command.ExecuteReader();// 执行查询
 
-                    string className = "";  // 班级名称
+                    string className = "";   // 班级名称
                     cboClass.Items.Clear();  // 清除原有值
 
                     // 循环读出所有的班级名，并添加到班级组合框中
@@ -187,10 +184,10 @@ namespace MySchool
         /// <summary>
         /// 验证窗体输入
         /// </summary>
-        /// <returns>验证通过返回True，验证失败返回False</returns>
+        /// <returns>验证成功返回True，失败返回False</returns>
         private bool ValidateInput()
         {
-            if (txtLoginId.Text == "")  // 验证是否输入了用户名 
+            if (txtLoginId.Text == "")   // 验证是否输入了用户名 
             {
                 MessageBox.Show("请输入用户名", "输入提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtLoginId.Focus();
@@ -248,12 +245,12 @@ namespace MySchool
         }
 
         /// <summary>
-        /// 根据组合框中的班级名称，获取班级id
+        /// 获取班级Id
         /// </summary>
-        /// <returns>班级的Id号</returns>
+        /// <returns>返回组合框中选中的班级的Id值</returns>
         private int GetClassId()
         {
-            int classId = 0;  // 年级名称
+            int classId = 0;  // 班级名称
             string sql = string.Format("SELECT ClassID FROM Class WHERE ClassName='{0}'", cboClass.Text);
 
             try
@@ -262,7 +259,7 @@ namespace MySchool
                 DBHelper.connection.Open();  // 打开数据库连接
                 SqlDataReader dataReader = command.ExecuteReader();// 执行查询                
 
-                // 读出班级id
+                // 读出班级Id
                 if (dataReader.Read())
                 {
                     classId = (int)dataReader["ClassID"];
@@ -280,6 +277,7 @@ namespace MySchool
                 DBHelper.connection.Close();  // 关闭数据库连接
             }
             return classId;
-        } 
+        }        
+
     }
 }

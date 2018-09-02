@@ -11,7 +11,6 @@ namespace MySchool
 {
     /// <summary>
     /// 查询学员用户窗体
-    /// 第七章课堂案例示例5
     /// </summary>
     public partial class SearchStudentForm : Form
     {
@@ -38,9 +37,9 @@ namespace MySchool
             {
                 FillListView();  // 填充列表视图
             }
-        }
+        }     
 
-        // 删除用户，示例5
+        // 删除用户
         private void tsmiDelete_Click(object sender, EventArgs e)
         {
             // 确保用户选择了一个学员才执行删除操作
@@ -195,7 +194,7 @@ namespace MySchool
 
                 SqlDataReader dataReader = command.ExecuteReader();  // 执行查询用户命令
 
-                lvStudent.Items.Clear();    // 清除ListView中的所有项
+                lvStudent.Items.Clear();  // 清除ListView中的所有项
 
                 // 如果结果中没有数据行，就弹出提示，
                 if (!dataReader.HasRows)

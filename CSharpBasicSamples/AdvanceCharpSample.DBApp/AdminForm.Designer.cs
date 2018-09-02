@@ -130,14 +130,15 @@
             // tsmiStudentList
             // 
             this.tsmiStudentList.Name = "tsmiStudentList";
-            this.tsmiStudentList.Size = new System.Drawing.Size(142, 22);
+            this.tsmiStudentList.Size = new System.Drawing.Size(152, 22);
             this.tsmiStudentList.Text = "学员信息列表";
             // 
             // tsmiTeacherList
             // 
             this.tsmiTeacherList.Name = "tsmiTeacherList";
-            this.tsmiTeacherList.Size = new System.Drawing.Size(152, 22);
+            this.tsmiTeacherList.Size = new System.Drawing.Size(142, 22);
             this.tsmiTeacherList.Text = "教员信息列表";
+            this.tsmiTeacherList.Click += new System.EventHandler(this.tsmiTeacherList_Click);
             // 
             // toolStripSeparator
             // 
@@ -247,6 +248,7 @@
             this.tsbtnTeacherList.Name = "tsbtnTeacherList";
             this.tsbtnTeacherList.Size = new System.Drawing.Size(105, 28);
             this.tsbtnTeacherList.Text = "教员信息列表";
+            this.tsbtnTeacherList.Click += new System.EventHandler(this.tsmiTeacherList_Click);
             // 
             // tsbtnQuestion
             // 
