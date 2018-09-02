@@ -11,7 +11,7 @@ namespace MySchool
 {
     /// <summary>
     /// 查询学员用户窗体
-    /// 第七章课堂案例示例3
+    /// 第七章课堂案例示例4
     /// </summary>
     public partial class SearchStudentForm : Form
     {
@@ -26,7 +26,7 @@ namespace MySchool
             this.Close();
         }
 
-        // 查找用户，示例3
+        // 查找用户
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtLoginId.Text == "")  // 必须输入用户名才能查找
@@ -39,6 +39,88 @@ namespace MySchool
                 FillListView();  // 填充列表视图
             }
         }     
+
+        // 将用户状态修改为活动的
+        private void tsmiActive_Click(object sender, EventArgs e)
+        {
+            // 确保用户选择了一个学员才执行修改操作
+            if (lvStudent.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("您没有选择任何用户", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // 删除用sql语句
+                string sql = string.Format("Update Student SET UserStateId=1 WHERE StudentID={0}", (int)lvStudent.SelectedItems[0].Tag);
+                int result = 0;  // 操作结果
+
+                try
+                {
+                    // 创建Command对象
+                    SqlCommand command = new SqlCommand(sql, DBHelper.connection);
+                    DBHelper.connection.Open();  // 打开数据库连接
+                    result = command.ExecuteNonQuery();  // 执行命令                        
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    DBHelper.connection.Close();  // 关闭数据库连接
+                }
+                if (result < 1)  // 操作失败
+                {
+                    MessageBox.Show("修改失败！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else  // 操作成功
+                {
+                    MessageBox.Show("修改成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FillListView();  // 重新查询信息填充列表视图
+                }
+            }
+        }
+
+        // 将用户状态修改为非活动的，示例4
+        private void tsmiInActive_Click(object sender, EventArgs e)
+        {
+            // 确保用户选择了一个学员才执行修改操作
+            if (lvStudent.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("您没有选择任何用户", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // 删除用sql语句
+                string sql = string.Format("Update Student SET UserStateId=0 WHERE StudentID={0}", (int)lvStudent.SelectedItems[0].Tag);
+                int result = 0;  // 操作结果
+
+                try
+                {
+                    // 创建Command对象
+                    SqlCommand command = new SqlCommand(sql, DBHelper.connection);
+                    DBHelper.connection.Open();          // 打开数据库连接
+                    result = command.ExecuteNonQuery();  // 执行命令                        
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    DBHelper.connection.Close();  // 关闭数据库连接
+                }
+                if (result < 1)  // 操作失败
+                {
+                    MessageBox.Show("修改失败！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else  // 操作成功
+                {
+                    MessageBox.Show("修改成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FillListView();  // 重新查询信息填充列表视图
+                }
+            }
+        }
 
         /// <summary>
         /// 根据查询条件，从数据库中读取信息，填充列表视图

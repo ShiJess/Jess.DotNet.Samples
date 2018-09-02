@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchStudentForm));
             this.lblLoginId = new System.Windows.Forms.Label();
             this.txtLoginId = new System.Windows.Forms.TextBox();
@@ -39,6 +40,12 @@
             this.chStudentName = new System.Windows.Forms.ColumnHeader();
             this.chStudentNO = new System.Windows.Forms.ColumnHeader();
             this.chUserState = new System.Windows.Forms.ColumnHeader();
+            this.cmsStudent = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuModify = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuActive = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuInActive = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsStudent.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLoginId
@@ -99,6 +106,7 @@
             this.chStudentName,
             this.chStudentNO,
             this.chUserState});
+            this.lvStudent.ContextMenuStrip = this.cmsStudent;
             this.lvStudent.FullRowSelect = true;
             this.lvStudent.GridLines = true;
             this.lvStudent.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -131,6 +139,43 @@
             this.chUserState.Text = "用户状态";
             this.chUserState.Width = 90;
             // 
+            // cmsStudent
+            // 
+            this.cmsStudent.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuModify,
+            this.mnuDelete});
+            this.cmsStudent.Name = "contextMenuStrip1";
+            this.cmsStudent.Size = new System.Drawing.Size(153, 70);
+            // 
+            // mnuModify
+            // 
+            this.mnuModify.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuActive,
+            this.mnuInActive});
+            this.mnuModify.Name = "mnuModify";
+            this.mnuModify.Size = new System.Drawing.Size(152, 22);
+            this.mnuModify.Text = "修改用户状态";
+            // 
+            // mnuActive
+            // 
+            this.mnuActive.Name = "mnuActive";
+            this.mnuActive.Size = new System.Drawing.Size(106, 22);
+            this.mnuActive.Text = "活动";
+            this.mnuActive.Click += new System.EventHandler(this.tsmiActive_Click);
+            // 
+            // mnuInActive
+            // 
+            this.mnuInActive.Name = "mnuInActive";
+            this.mnuInActive.Size = new System.Drawing.Size(106, 22);
+            this.mnuInActive.Text = "非活动";
+            this.mnuInActive.Click += new System.EventHandler(this.tsmiInActive_Click);
+            // 
+            // mnuDelete
+            // 
+            this.mnuDelete.Name = "mnuDelete";
+            this.mnuDelete.Size = new System.Drawing.Size(152, 22);
+            this.mnuDelete.Text = "删除";
+            // 
             // SearchStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -148,6 +193,7 @@
             this.Name = "SearchStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "查找学员用户";
+            this.cmsStudent.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +210,11 @@
         private System.Windows.Forms.ColumnHeader chStudentName;
         private System.Windows.Forms.ColumnHeader chLoginID;
         private System.Windows.Forms.ColumnHeader chStudentNO;
+        private System.Windows.Forms.ContextMenuStrip cmsStudent;
+        private System.Windows.Forms.ToolStripMenuItem mnuDelete;
+        private System.Windows.Forms.ToolStripMenuItem mnuModify;
         private System.Windows.Forms.ColumnHeader chUserState;
+        private System.Windows.Forms.ToolStripMenuItem mnuActive;
+        private System.Windows.Forms.ToolStripMenuItem mnuInActive;
     }
 }
