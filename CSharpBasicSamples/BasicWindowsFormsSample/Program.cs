@@ -14,7 +14,7 @@ namespace MySchool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddStudentForm());
+            Application.Run(new AdminForm());
         }
     }
 }

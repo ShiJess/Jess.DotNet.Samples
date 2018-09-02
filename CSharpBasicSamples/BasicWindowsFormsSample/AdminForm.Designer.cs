@@ -84,13 +84,14 @@
             // tsmiNewStudent
             // 
             this.tsmiNewStudent.Name = "tsmiNewStudent";
-            this.tsmiNewStudent.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNewStudent.Size = new System.Drawing.Size(142, 22);
             this.tsmiNewStudent.Text = "新增学员用户";
+            this.tsmiNewStudent.Click += new System.EventHandler(this.tsmiNewStudent_Click);
             // 
             // tsmiNewTeacher
             // 
             this.tsmiNewTeacher.Name = "tsmiNewTeacher";
-            this.tsmiNewTeacher.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNewTeacher.Size = new System.Drawing.Size(142, 22);
             this.tsmiNewTeacher.Text = "新增教员用户";
             // 
             // tsmiSearchStudent

@@ -22,6 +22,14 @@ namespace MySchool
         private void tsmiExit_Click(object sender, EventArgs e)
         {
             Application.Exit();  // 退出应用程序           
-        }   
+        }
+
+        // 用户单击创建用户菜单项时，出现新建用户窗口
+        private void tsmiNewStudent_Click(object sender, EventArgs e)
+        {
+            // 创建新建用户窗体
+            AddStudentForm addStudentForm = new AddStudentForm();
+            addStudentForm.Show();  // 显示新建用户窗体
+        }         
     }
 }
