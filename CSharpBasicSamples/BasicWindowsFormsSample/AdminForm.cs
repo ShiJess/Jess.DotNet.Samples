@@ -18,6 +18,12 @@ namespace MySchool
             InitializeComponent();
         }
 
+        // 设置状态栏的标签的文本，显示当前登录的用户名
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            this.slblAdmin.Text = this.slblAdmin.Text + "-" + UserHelper.loginId;
+        }
+
         // 关闭窗体时，退出应用程序
         private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {

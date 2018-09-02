@@ -298,6 +298,7 @@
             this.Text = "MySchool-管理员";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.msAdmin.ResumeLayout(false);
             this.msAdmin.PerformLayout();
             this.tsAdmin.ResumeLayout(false);

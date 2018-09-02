@@ -27,14 +27,18 @@ namespace MySchool
         // 点击登录按钮时，设置用户名和登录类型
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            // 调用用户验证方法，根据返回值确定是否通过验证
+            // 如果验证通过，就显示相应的用户窗体，并将当前窗体设为不可见
             if (ValidateInput())
-            {
-                MessageBox.Show("验证成功");
-            }
-            else
-            {
-                MessageBox.Show("验证失败");
+            {  
+                // 显示相应的窗体
+                // 将输入的用户名保存到静态变量中
+                UserHelper.loginId = txtLogInId.Text;
+                // 将选择的登录类型保存到静态变量中
+                UserHelper.loginType = cboLogInType.Text;
+
+                ShowUserForm();  // 显示相应用户的主窗体
+
+                this.Visible = false;                
             }
         }
 
@@ -65,6 +69,32 @@ namespace MySchool
             {
                 return true;
             }            
-        }  
+        }        
+
+        /// <summary>
+        /// 根据登录类型，显示相应的窗体
+        /// </summary>
+        public void ShowUserForm()
+        {
+            switch (cboLogInType.Text)
+            {
+                // 如果是学员，显示学员窗体
+                case "学员":
+                    MessageBox.Show("抱歉，您请求的功能尚未完成！");
+                    break;
+                // 如果是教员，显示教员窗体
+                case "教员":
+                    MessageBox.Show("抱歉，您请求的功能尚未完成！");
+                    break;
+                // 如果是管理员，显示管理员窗体
+                case "管理员":
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
+                    break;
+                default:
+                    MessageBox.Show("抱歉，您请求的功能尚未完成！");
+                    break;
+            }
+        }
     }
 }
