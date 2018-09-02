@@ -181,6 +181,7 @@
             this.tsmiAbout.Name = "tsmiAbout";
             this.tsmiAbout.Size = new System.Drawing.Size(166, 22);
             this.tsmiAbout.Text = "关于考试管理系统";
+            this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
             // tsAdmin
             // 

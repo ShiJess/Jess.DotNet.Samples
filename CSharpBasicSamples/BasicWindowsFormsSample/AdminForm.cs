@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace MySchool
 {
     /// <summary>
-    /// 管理员主窗体    
+    /// 管理员主窗体
     /// </summary>
     public partial class AdminForm : Form
     {
@@ -44,5 +44,12 @@ namespace MySchool
             addStudentForm.MdiParent = this;  // 设置父窗体
             addStudentForm.Show();  // 显示新建用户窗体
         }
+
+        // “关于MySchool”菜单项的Click事件处理
+        private void tsmiAbout_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();   // 打开关于窗体，显示为模式窗口
+        }  
     }
 }
