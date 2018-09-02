@@ -48,7 +48,7 @@ namespace MySchool
             // 创建新建用户窗体
             AddStudentForm addStudentForm = new AddStudentForm();
             addStudentForm.MdiParent = this;  // 设置父窗体
-            addStudentForm.Show();  // 显示新建用户窗体
+            addStudentForm.Show();            // 显示新建用户窗体
         }
 
         // “关于MySchool”菜单项的Click事件处理
@@ -56,6 +56,14 @@ namespace MySchool
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();   // 打开关于窗体，显示为模式窗口
-        }  
+        }
+        
+        // 单击时，打开查询学员用户窗体
+        private void tsmiSearchStudent_Click(object sender, EventArgs e)
+        {
+            SearchStudentForm searchStudentForm = new SearchStudentForm();//创建窗体对象
+            searchStudentForm.MdiParent = this;  // 设置MDI父窗体
+            searchStudentForm.Show();            // 显示窗体
+        }    
     }
 }

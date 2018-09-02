@@ -65,7 +65,6 @@ namespace MySchool
         /// <summary>
         /// 验证用户是否进行了输入和选择
         /// </summary>
-        /// <returns>验证成功返回True，失败返回False</returns>
         private bool ValidateInput()
         {
             if (txtLogInId.Text.Trim() == "")

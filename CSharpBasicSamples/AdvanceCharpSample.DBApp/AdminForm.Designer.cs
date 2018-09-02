@@ -116,6 +116,7 @@
             this.tsmiSearchStudent.Name = "tsmiSearchStudent";
             this.tsmiSearchStudent.Size = new System.Drawing.Size(154, 22);
             this.tsmiSearchStudent.Text = "查询及修改学员";
+            this.tsmiSearchStudent.Click += new System.EventHandler(this.tsmiSearchStudent_Click);
             // 
             // tsmiUserList
             // 
@@ -135,7 +136,7 @@
             // tsmiTeacherList
             // 
             this.tsmiTeacherList.Name = "tsmiTeacherList";
-            this.tsmiTeacherList.Size = new System.Drawing.Size(142, 22);
+            this.tsmiTeacherList.Size = new System.Drawing.Size(152, 22);
             this.tsmiTeacherList.Text = "教员信息列表";
             // 
             // toolStripSeparator
@@ -230,6 +231,7 @@
             this.tsbtnSearchStudent.Name = "tsbtnSearchStudent";
             this.tsbtnSearchStudent.Size = new System.Drawing.Size(117, 28);
             this.tsbtnSearchStudent.Text = "查询及修改学员";
+            this.tsbtnSearchStudent.Click += new System.EventHandler(this.tsmiSearchStudent_Click);
             // 
             // tsbtnStudentList
             // 
