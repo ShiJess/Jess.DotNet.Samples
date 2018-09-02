@@ -2,36 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HelloACCP
+namespace HelloWangyexx
 {
     /// <summary>
-    /// 本示例演示如何在内层循环使用break
+    /// 此示例演示使用 C# 中的一维数组
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            int count = 0;  // 计算共卖了多少件衣服
-            int i, j;       // 循环变量
-            string choice;  // 顾客的选择是否离开
-
-            //外层循环控制依次进入下一个专卖店
-            for (i = 0; i < 5; i++)
+            int[] array = new int[5] { 0, 1, 2, 3, 4 };// 声明并初始化一维数组
+            for (int i = 0; i < array.Length; i++)    // 输出数组中的所有元素
             {
-                Console.WriteLine("\n欢迎光临第{0}家专卖店", i + 1);
-                for (j = 0; j < 3; j++)
-                {
-                    Console.Write("要离开吗(y/n)？");
-                    choice = Console.ReadLine();
-                    // 如果离开，就跳出，结账，进入下一个店
-                    if (choice == "y")
-                        break;
-                    Console.WriteLine("买了一件衣服");
-                    count++;  // 买一件衣服
-                }
-                Console.WriteLine("离店结账");
+                Console.WriteLine(array[i]);
             }
-            Console.WriteLine("\n共买了{0}件衣服", count);
             Console.ReadLine();
         }
     }
