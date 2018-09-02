@@ -1,17 +1,19 @@
-锘縰sing System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MyNotePad
+namespace MyMessage
 {
-    public partial class NotePadForm : Form
+    /// <summary>
+    /// 本示例演示 anchor 属性
+    /// </summary>
+    public partial class MyMessageForm : Form
     {
-        public NotePadForm()
+        public MyMessageForm()
         {
             InitializeComponent();
         }

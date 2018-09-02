@@ -77,6 +77,12 @@
     <Compile Include="LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyMessageForm.Designer.cs">
+      <DependentUpon>MyMessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddStudentForm.resx">
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyMessageForm.resx">
+      <DependentUpon>MyMessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

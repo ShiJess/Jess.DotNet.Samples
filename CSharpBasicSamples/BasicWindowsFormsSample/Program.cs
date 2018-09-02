@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace MySchool
+namespace MyMessage
 {
     static class Program
     {
@@ -14,7 +14,7 @@ namespace MySchool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddStudentForm());
+            Application.Run(new MyMessageForm());
         }
     }
 }
