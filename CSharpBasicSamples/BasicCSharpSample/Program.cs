@@ -5,34 +5,42 @@ using System.Text;
 namespace HelloWangyexx
 {
     /// <summary>
-    /// 此示例演示使用Split()和Join()方法分割和连接字符串
+    /// 此示例演示 String 类的 Format 方法
+    /// 输出一段个人信息
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            string inputString;  // 输入的字符串
-            string[] splitStrings; // 分割后的字符串数组
-            string joinString;  // 连接后的新字符串
+            string name;  // 姓名            
+            string birthday;  // 出生年月
+            int height;  // 身高
+            string bloodType;  // 血型
+            string planet;  // 星座
+            string favourFood;  // 最喜欢的食物
+            string record;  // 个人档案
 
-            // 输入提示
-            Console.WriteLine("请输入一串字符串，用空格分隔单词：");
-            inputString = Console.ReadLine();//  接收输入
+            Console.WriteLine("你好，欢迎来到 C# 世界！");
+            Console.WriteLine("请输入你的个人信息，我将为你建立个人档案！");
+            Console.Write("姓名：");
+            name = Console.ReadLine();
+            Console.Write("出生年月（*年*月格式）：");
+            birthday = Console.ReadLine();
+            Console.Write("身高(cm)：");
+            height = int.Parse(Console.ReadLine());
+            Console.Write("血型：");
+            bloodType = Console.ReadLine();
+            Console.Write("星座：");
+            planet = Console.ReadLine();
+            Console.Write("最喜欢的食物：");
+            favourFood = Console.ReadLine();
 
-            splitStrings = inputString.Split(' ');  // 以空格作为分隔符分割字符串
+            record = string.Format(
+                "姓名：{0}\n出生年月：{1}\n身高：{2}\n血型：{3}\n星座：{4}\n最喜欢的食物：{5}",
+                name, birthday, height, bloodType, planet, favourFood);
 
-            // 将分割后的字符串输出
-            Console.WriteLine("\n分割后的字符串为：");
-            foreach (string s in splitStrings)
-            {
-                Console.WriteLine(s);
-            }
-
-            // 将分割后的字符串使用下划线连接在一起
-            joinString = string.Join("_", splitStrings);
-
-            // 将连接后的字符串输出
-            Console.WriteLine("\n连接后的新字符串为：{0}", joinString);
+            Console.WriteLine("\n这是你的个人档案：");
+            Console.WriteLine(record);
 
             Console.ReadLine();
         }
