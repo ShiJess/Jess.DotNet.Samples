@@ -3,14 +3,14 @@
     partial class AddStudentForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// 必需的设计器变量。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// 清理所有正在使用的资源。
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,155 +20,169 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows 窗体设计器生成的代码
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// 设计器支持所需的方法 - 不要
+        /// 使用代码编辑器修改此方法的内容。
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStudentForm));
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblPswAgain = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtPswAgain = new System.Windows.Forms.TextBox();
+            this.lblLoginId = new System.Windows.Forms.Label();
+            this.txtLoginId = new System.Windows.Forms.TextBox();
+            this.lblLoginPwd = new System.Windows.Forms.Label();
+            this.lblPwdAgain = new System.Windows.Forms.Label();
+            this.txtLoginPwd = new System.Windows.Forms.TextBox();
+            this.txtPwdAgain = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblTel = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.lblStudentName = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.txtStudentName = new System.Windows.Forms.TextBox();
             this.rdoMale = new System.Windows.Forms.RadioButton();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
-            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblStudentNO = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtStudentNO = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.radActive = new System.Windows.Forms.RadioButton();
-            this.radInactive = new System.Windows.Forms.RadioButton();
-            this.lblState = new System.Windows.Forms.Label();
+            this.rdoActive = new System.Windows.Forms.RadioButton();
+            this.rdoInactive = new System.Windows.Forms.RadioButton();
+            this.lblUserState = new System.Windows.Forms.Label();
             this.pnlState = new System.Windows.Forms.Panel();
-            this.lstGrade = new System.Windows.Forms.ListBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblSex = new System.Windows.Forms.Label();
             this.pnlSex = new System.Windows.Forms.Panel();
             this.cboClass = new System.Windows.Forms.ComboBox();
             this.lblClass = new System.Windows.Forms.Label();
             this.lblGrade = new System.Windows.Forms.Label();
-            this.grpRegister = new System.Windows.Forms.GroupBox();
-            this.grpBasee = new System.Windows.Forms.GroupBox();
+            this.tabNewStudent = new System.Windows.Forms.TabControl();
+            this.tpRegisterInfo = new System.Windows.Forms.TabPage();
+            this.tpBaseInfo = new System.Windows.Forms.TabPage();
+            this.cboGrade = new System.Windows.Forms.ComboBox();
             this.pnlState.SuspendLayout();
             this.pnlSex.SuspendLayout();
-            this.grpRegister.SuspendLayout();
-            this.grpBasee.SuspendLayout();
+            this.tabNewStudent.SuspendLayout();
+            this.tpRegisterInfo.SuspendLayout();
+            this.tpBaseInfo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblUserName
+            // lblLoginId
             // 
-            this.lblUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(39, 19);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(41, 12);
-            this.lblUserName.TabIndex = 4;
-            this.lblUserName.Text = "用户名";
+            this.lblLoginId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLoginId.AutoSize = true;
+            this.lblLoginId.Location = new System.Drawing.Point(47, 46);
+            this.lblLoginId.Name = "lblLoginId";
+            this.lblLoginId.Size = new System.Drawing.Size(41, 12);
+            this.lblLoginId.TabIndex = 0;
+            this.lblLoginId.Text = "用户名";
             // 
-            // txtUserName
+            // txtLoginId
             // 
-            this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUserName.Location = new System.Drawing.Point(99, 15);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(155, 21);
-            this.txtUserName.TabIndex = 0;
+            this.txtLoginId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLoginId.Location = new System.Drawing.Point(107, 42);
+            this.txtLoginId.Name = "txtLoginId";
+            this.txtLoginId.Size = new System.Drawing.Size(155, 21);
+            this.txtLoginId.TabIndex = 1;
             // 
-            // lblPassword
+            // lblLoginPwd
             // 
-            this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(51, 47);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(29, 12);
-            this.lblPassword.TabIndex = 5;
-            this.lblPassword.Text = "密码";
+            this.lblLoginPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLoginPwd.AutoSize = true;
+            this.lblLoginPwd.Location = new System.Drawing.Point(59, 94);
+            this.lblLoginPwd.Name = "lblLoginPwd";
+            this.lblLoginPwd.Size = new System.Drawing.Size(29, 12);
+            this.lblLoginPwd.TabIndex = 2;
+            this.lblLoginPwd.Text = "密码";
             // 
-            // lblPswAgain
+            // lblPwdAgain
             // 
-            this.lblPswAgain.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblPswAgain.AutoSize = true;
-            this.lblPswAgain.Location = new System.Drawing.Point(27, 73);
-            this.lblPswAgain.Name = "lblPswAgain";
-            this.lblPswAgain.Size = new System.Drawing.Size(53, 12);
-            this.lblPswAgain.TabIndex = 6;
-            this.lblPswAgain.Text = "确认密码";
+            this.lblPwdAgain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPwdAgain.AutoSize = true;
+            this.lblPwdAgain.Location = new System.Drawing.Point(35, 143);
+            this.lblPwdAgain.Name = "lblPwdAgain";
+            this.lblPwdAgain.Size = new System.Drawing.Size(53, 12);
+            this.lblPwdAgain.TabIndex = 4;
+            this.lblPwdAgain.Text = "确认密码";
             // 
-            // txtPassword
+            // txtLoginPwd
             // 
-            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPassword.Location = new System.Drawing.Point(99, 42);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(155, 21);
-            this.txtPassword.TabIndex = 1;
+            this.txtLoginPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLoginPwd.Location = new System.Drawing.Point(107, 90);
+            this.txtLoginPwd.Name = "txtLoginPwd";
+            this.txtLoginPwd.PasswordChar = '*';
+            this.txtLoginPwd.Size = new System.Drawing.Size(155, 21);
+            this.txtLoginPwd.TabIndex = 3;
             // 
-            // txtPswAgain
+            // txtPwdAgain
             // 
-            this.txtPswAgain.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPswAgain.Location = new System.Drawing.Point(99, 69);
-            this.txtPswAgain.Name = "txtPswAgain";
-            this.txtPswAgain.PasswordChar = '*';
-            this.txtPswAgain.Size = new System.Drawing.Size(155, 21);
-            this.txtPswAgain.TabIndex = 2;
+            this.txtPwdAgain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPwdAgain.Location = new System.Drawing.Point(107, 139);
+            this.txtPwdAgain.Name = "txtPwdAgain";
+            this.txtPwdAgain.PasswordChar = '*';
+            this.txtPwdAgain.Size = new System.Drawing.Size(155, 21);
+            this.txtPwdAgain.TabIndex = 5;
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSave.Location = new System.Drawing.Point(130, 377);
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.Location = new System.Drawing.Point(157, 297);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 1;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // btnCancel
+            // btnClose
             // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancel.Location = new System.Drawing.Point(211, 377);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "取消";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClose.Location = new System.Drawing.Point(238, 297);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "关闭";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lblName
+            // lblStudentName
             // 
-            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(44, 24);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(29, 12);
-            this.lblName.TabIndex = 7;
-            this.lblName.Text = "姓名";
+            this.lblStudentName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblStudentName.AutoSize = true;
+            this.lblStudentName.Location = new System.Drawing.Point(50, 15);
+            this.lblStudentName.Name = "lblStudentName";
+            this.lblStudentName.Size = new System.Drawing.Size(29, 12);
+            this.lblStudentName.TabIndex = 0;
+            this.lblStudentName.Text = "姓名";
             // 
-            // lblTel
+            // lblPhone
             // 
-            this.lblTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTel.AutoSize = true;
-            this.lblTel.Location = new System.Drawing.Point(43, 78);
-            this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(29, 12);
-            this.lblTel.TabIndex = 9;
-            this.lblTel.Text = "电话";
+            this.lblPhone.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(50, 86);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(29, 12);
+            this.lblPhone.TabIndex = 4;
+            this.lblPhone.Text = "电话";
             // 
-            // txtName
+            // txtStudentName
             // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtName.Location = new System.Drawing.Point(99, 20);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(156, 21);
-            this.txtName.TabIndex = 0;
+            this.txtStudentName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtStudentName.Location = new System.Drawing.Point(105, 11);
+            this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.Size = new System.Drawing.Size(156, 21);
+            this.txtStudentName.TabIndex = 1;
             // 
             // rdoMale
             // 
@@ -192,134 +206,128 @@
             this.rdoFemale.Text = "女";
             this.rdoFemale.UseVisualStyleBackColor = true;
             // 
-            // lblAddress
+            // lblStudentNO
             // 
-            this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(44, 51);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(29, 12);
-            this.lblAddress.TabIndex = 8;
-            this.lblAddress.Text = "地址";
+            this.lblStudentNO.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblStudentNO.AutoSize = true;
+            this.lblStudentNO.Location = new System.Drawing.Point(50, 51);
+            this.lblStudentNO.Name = "lblStudentNO";
+            this.lblStudentNO.Size = new System.Drawing.Size(29, 12);
+            this.lblStudentNO.TabIndex = 2;
+            this.lblStudentNO.Text = "学号";
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(20, 105);
+            this.lblEmail.Location = new System.Drawing.Point(26, 123);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(53, 12);
-            this.lblEmail.TabIndex = 10;
+            this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "电子邮件";
             // 
-            // txtAddress
+            // txtStudentNO
             // 
-            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAddress.Location = new System.Drawing.Point(99, 47);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(156, 21);
-            this.txtAddress.TabIndex = 1;
+            this.txtStudentNO.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtStudentNO.Location = new System.Drawing.Point(105, 47);
+            this.txtStudentNO.Name = "txtStudentNO";
+            this.txtStudentNO.Size = new System.Drawing.Size(156, 21);
+            this.txtStudentNO.TabIndex = 3;
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtEmail.Location = new System.Drawing.Point(99, 101);
+            this.txtEmail.Location = new System.Drawing.Point(105, 119);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(156, 21);
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 7;
             // 
-            // radActive
+            // rdoActive
             // 
-            this.radActive.AutoSize = true;
-            this.radActive.Checked = true;
-            this.radActive.Location = new System.Drawing.Point(19, 3);
-            this.radActive.Name = "radActive";
-            this.radActive.Size = new System.Drawing.Size(47, 16);
-            this.radActive.TabIndex = 0;
-            this.radActive.TabStop = true;
-            this.radActive.Tag = "1";
-            this.radActive.Text = "活动";
-            this.radActive.UseVisualStyleBackColor = true;
+            this.rdoActive.AutoSize = true;
+            this.rdoActive.Checked = true;
+            this.rdoActive.Location = new System.Drawing.Point(19, 3);
+            this.rdoActive.Name = "rdoActive";
+            this.rdoActive.Size = new System.Drawing.Size(47, 16);
+            this.rdoActive.TabIndex = 0;
+            this.rdoActive.TabStop = true;
+            this.rdoActive.Tag = "1";
+            this.rdoActive.Text = "活动";
+            this.rdoActive.UseVisualStyleBackColor = true;
             // 
-            // radInactive
+            // rdoInactive
             // 
-            this.radInactive.AutoSize = true;
-            this.radInactive.Location = new System.Drawing.Point(79, 3);
-            this.radInactive.Name = "radInactive";
-            this.radInactive.Size = new System.Drawing.Size(59, 16);
-            this.radInactive.TabIndex = 1;
-            this.radInactive.Tag = "0";
-            this.radInactive.Text = "非活动";
-            this.radInactive.UseVisualStyleBackColor = true;
+            this.rdoInactive.AutoSize = true;
+            this.rdoInactive.Location = new System.Drawing.Point(79, 3);
+            this.rdoInactive.Name = "rdoInactive";
+            this.rdoInactive.Size = new System.Drawing.Size(59, 16);
+            this.rdoInactive.TabIndex = 1;
+            this.rdoInactive.Tag = "0";
+            this.rdoInactive.Text = "非活动";
+            this.rdoInactive.UseVisualStyleBackColor = true;
             // 
-            // lblState
+            // lblUserState
             // 
-            this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(51, 103);
-            this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(29, 12);
-            this.lblState.TabIndex = 8;
-            this.lblState.Text = "状态";
+            this.lblUserState.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserState.AutoSize = true;
+            this.lblUserState.Location = new System.Drawing.Point(59, 192);
+            this.lblUserState.Name = "lblUserState";
+            this.lblUserState.Size = new System.Drawing.Size(29, 12);
+            this.lblUserState.TabIndex = 6;
+            this.lblUserState.Text = "状态";
             // 
             // pnlState
             // 
-            this.pnlState.Controls.Add(this.radActive);
-            this.pnlState.Controls.Add(this.radInactive);
-            this.pnlState.Location = new System.Drawing.Point(99, 96);
+            this.pnlState.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlState.Controls.Add(this.rdoActive);
+            this.pnlState.Controls.Add(this.rdoInactive);
+            this.pnlState.Location = new System.Drawing.Point(107, 188);
             this.pnlState.Name = "pnlState";
             this.pnlState.Size = new System.Drawing.Size(155, 21);
             this.pnlState.TabIndex = 7;
             // 
-            // lstGrade
+            // txtPhone
             // 
-            this.lstGrade.FormattingEnabled = true;
-            this.lstGrade.ItemHeight = 12;
-            this.lstGrade.Items.AddRange(new object[] {
-            "S1",
-            "S2",
-            "Y2"});
-            this.lstGrade.Location = new System.Drawing.Point(100, 158);
-            this.lstGrade.Name = "lstGrade";
-            this.lstGrade.Size = new System.Drawing.Size(155, 16);
-            this.lstGrade.TabIndex = 16;
-            // 
-            // txtTel
-            // 
-            this.txtTel.Location = new System.Drawing.Point(99, 74);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(156, 21);
-            this.txtTel.TabIndex = 15;
+            this.txtPhone.Location = new System.Drawing.Point(106, 82);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(156, 21);
+            this.txtPhone.TabIndex = 5;
             // 
             // lblSex
             // 
             this.lblSex.AutoSize = true;
-            this.lblSex.Location = new System.Drawing.Point(44, 135);
+            this.lblSex.Location = new System.Drawing.Point(50, 154);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(29, 12);
-            this.lblSex.TabIndex = 14;
+            this.lblSex.TabIndex = 8;
             this.lblSex.Text = "性别";
             // 
             // pnlSex
             // 
             this.pnlSex.Controls.Add(this.rdoMale);
             this.pnlSex.Controls.Add(this.rdoFemale);
-            this.pnlSex.Location = new System.Drawing.Point(100, 130);
+            this.pnlSex.Location = new System.Drawing.Point(106, 149);
             this.pnlSex.Name = "pnlSex";
             this.pnlSex.Size = new System.Drawing.Size(155, 22);
-            this.pnlSex.TabIndex = 13;
+            this.pnlSex.TabIndex = 9;
             // 
             // cboClass
             // 
+            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboClass.FormattingEnabled = true;
-            this.cboClass.Location = new System.Drawing.Point(100, 180);
+            this.cboClass.Location = new System.Drawing.Point(106, 208);
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(155, 20);
-            this.cboClass.TabIndex = 6;
+            this.cboClass.TabIndex = 13;
             // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(44, 184);
+            this.lblClass.Location = new System.Drawing.Point(50, 212);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(29, 12);
             this.lblClass.TabIndex = 12;
@@ -328,61 +336,83 @@
             // lblGrade
             // 
             this.lblGrade.AutoSize = true;
-            this.lblGrade.Location = new System.Drawing.Point(44, 160);
+            this.lblGrade.Location = new System.Drawing.Point(50, 181);
             this.lblGrade.Name = "lblGrade";
             this.lblGrade.Size = new System.Drawing.Size(29, 12);
-            this.lblGrade.TabIndex = 11;
+            this.lblGrade.TabIndex = 10;
             this.lblGrade.Text = "年级";
             // 
-            // grpRegister
+            // tabNewStudent
             // 
-            this.grpRegister.Controls.Add(this.lblState);
-            this.grpRegister.Controls.Add(this.lblUserName);
-            this.grpRegister.Controls.Add(this.pnlState);
-            this.grpRegister.Controls.Add(this.lblPassword);
-            this.grpRegister.Controls.Add(this.txtPswAgain);
-            this.grpRegister.Controls.Add(this.txtPassword);
-            this.grpRegister.Controls.Add(this.txtUserName);
-            this.grpRegister.Controls.Add(this.lblPswAgain);
-            this.grpRegister.Location = new System.Drawing.Point(17, 14);
-            this.grpRegister.Name = "grpRegister";
-            this.grpRegister.Size = new System.Drawing.Size(271, 134);
-            this.grpRegister.TabIndex = 5;
-            this.grpRegister.TabStop = false;
-            this.grpRegister.Text = "用户注册信息";
+            this.tabNewStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tabNewStudent.Controls.Add(this.tpRegisterInfo);
+            this.tabNewStudent.Controls.Add(this.tpBaseInfo);
+            this.tabNewStudent.Location = new System.Drawing.Point(12, 12);
+            this.tabNewStudent.Name = "tabNewStudent";
+            this.tabNewStudent.SelectedIndex = 0;
+            this.tabNewStudent.Size = new System.Drawing.Size(301, 279);
+            this.tabNewStudent.TabIndex = 0;
             // 
-            // grpBasee
+            // tpRegisterInfo
             // 
-            this.grpBasee.Controls.Add(this.lstGrade);
-            this.grpBasee.Controls.Add(this.lblName);
-            this.grpBasee.Controls.Add(this.txtName);
-            this.grpBasee.Controls.Add(this.txtTel);
-            this.grpBasee.Controls.Add(this.lblGrade);
-            this.grpBasee.Controls.Add(this.lblTel);
-            this.grpBasee.Controls.Add(this.lblAddress);
-            this.grpBasee.Controls.Add(this.lblSex);
-            this.grpBasee.Controls.Add(this.lblClass);
-            this.grpBasee.Controls.Add(this.txtAddress);
-            this.grpBasee.Controls.Add(this.lblEmail);
-            this.grpBasee.Controls.Add(this.pnlSex);
-            this.grpBasee.Controls.Add(this.cboClass);
-            this.grpBasee.Controls.Add(this.txtEmail);
-            this.grpBasee.Location = new System.Drawing.Point(16, 156);
-            this.grpBasee.Name = "grpBasee";
-            this.grpBasee.Size = new System.Drawing.Size(272, 215);
-            this.grpBasee.TabIndex = 6;
-            this.grpBasee.TabStop = false;
-            this.grpBasee.Text = "用户基本信息";
+            this.tpRegisterInfo.Controls.Add(this.lblUserState);
+            this.tpRegisterInfo.Controls.Add(this.pnlState);
+            this.tpRegisterInfo.Controls.Add(this.txtPwdAgain);
+            this.tpRegisterInfo.Controls.Add(this.lblLoginId);
+            this.tpRegisterInfo.Controls.Add(this.lblPwdAgain);
+            this.tpRegisterInfo.Controls.Add(this.txtLoginId);
+            this.tpRegisterInfo.Controls.Add(this.txtLoginPwd);
+            this.tpRegisterInfo.Controls.Add(this.lblLoginPwd);
+            this.tpRegisterInfo.Location = new System.Drawing.Point(4, 21);
+            this.tpRegisterInfo.Name = "tpRegisterInfo";
+            this.tpRegisterInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpRegisterInfo.Size = new System.Drawing.Size(293, 254);
+            this.tpRegisterInfo.TabIndex = 0;
+            this.tpRegisterInfo.Text = "用户注册信息";
+            this.tpRegisterInfo.UseVisualStyleBackColor = true;
+            // 
+            // tpBaseInfo
+            // 
+            this.tpBaseInfo.Controls.Add(this.cboGrade);
+            this.tpBaseInfo.Controls.Add(this.lblStudentName);
+            this.tpBaseInfo.Controls.Add(this.txtPhone);
+            this.tpBaseInfo.Controls.Add(this.lblPhone);
+            this.tpBaseInfo.Controls.Add(this.lblSex);
+            this.tpBaseInfo.Controls.Add(this.txtStudentNO);
+            this.tpBaseInfo.Controls.Add(this.pnlSex);
+            this.tpBaseInfo.Controls.Add(this.txtEmail);
+            this.tpBaseInfo.Controls.Add(this.cboClass);
+            this.tpBaseInfo.Controls.Add(this.lblEmail);
+            this.tpBaseInfo.Controls.Add(this.lblClass);
+            this.tpBaseInfo.Controls.Add(this.lblStudentNO);
+            this.tpBaseInfo.Controls.Add(this.lblGrade);
+            this.tpBaseInfo.Controls.Add(this.txtStudentName);
+            this.tpBaseInfo.Location = new System.Drawing.Point(4, 21);
+            this.tpBaseInfo.Name = "tpBaseInfo";
+            this.tpBaseInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpBaseInfo.Size = new System.Drawing.Size(293, 254);
+            this.tpBaseInfo.TabIndex = 1;
+            this.tpBaseInfo.Text = "用户基本信息";
+            this.tpBaseInfo.UseVisualStyleBackColor = true;
+            // 
+            // cboGrade
+            // 
+            this.cboGrade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGrade.FormattingEnabled = true;
+            this.cboGrade.Location = new System.Drawing.Point(106, 178);
+            this.cboGrade.Name = "cboGrade";
+            this.cboGrade.Size = new System.Drawing.Size(156, 20);
+            this.cboGrade.TabIndex = 11;
             // 
             // AddStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 414);
-            this.Controls.Add(this.grpBasee);
-            this.Controls.Add(this.grpRegister);
-            this.Controls.Add(this.btnCancel);
+            this.ClientSize = new System.Drawing.Size(327, 329);
+            this.Controls.Add(this.tabNewStudent);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AddStudentForm";
@@ -392,45 +422,47 @@
             this.pnlState.PerformLayout();
             this.pnlSex.ResumeLayout(false);
             this.pnlSex.PerformLayout();
-            this.grpRegister.ResumeLayout(false);
-            this.grpRegister.PerformLayout();
-            this.grpBasee.ResumeLayout(false);
-            this.grpBasee.PerformLayout();
+            this.tabNewStudent.ResumeLayout(false);
+            this.tpRegisterInfo.ResumeLayout(false);
+            this.tpRegisterInfo.PerformLayout();
+            this.tpBaseInfo.ResumeLayout(false);
+            this.tpBaseInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblPswAgain;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtPswAgain;
+        private System.Windows.Forms.Label lblLoginId;
+        private System.Windows.Forms.TextBox txtLoginId;
+        private System.Windows.Forms.Label lblLoginPwd;
+        private System.Windows.Forms.Label lblPwdAgain;
+        private System.Windows.Forms.TextBox txtLoginPwd;
+        private System.Windows.Forms.TextBox txtPwdAgain;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblTel;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblStudentName;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.TextBox txtStudentName;
         private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.RadioButton rdoFemale;
-        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblStudentNO;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtStudentNO;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.RadioButton radActive;
-        private System.Windows.Forms.RadioButton radInactive;
+        private System.Windows.Forms.RadioButton rdoActive;
+        private System.Windows.Forms.RadioButton rdoInactive;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.ComboBox cboClass;
         private System.Windows.Forms.Panel pnlState;
-        private System.Windows.Forms.Label lblState;
+        private System.Windows.Forms.Label lblUserState;
         private System.Windows.Forms.Panel pnlSex;
         private System.Windows.Forms.Label lblSex;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.ListBox lstGrade;
-        private System.Windows.Forms.GroupBox grpRegister;
-        private System.Windows.Forms.GroupBox grpBasee;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TabControl tabNewStudent;
+        private System.Windows.Forms.TabPage tpRegisterInfo;
+        private System.Windows.Forms.TabPage tpBaseInfo;
+        private System.Windows.Forms.ComboBox cboGrade;
     }
 }

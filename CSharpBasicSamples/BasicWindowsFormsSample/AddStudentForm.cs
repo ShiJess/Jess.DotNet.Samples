@@ -5,12 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace MySchool
 {
     /// <summary>
-    /// 创建学员用户主窗体
+    /// 新增学员用户窗体
     /// </summary>
     public partial class AddStudentForm : Form
     {
@@ -20,10 +19,10 @@ namespace MySchool
         }
         
         // 关闭当前窗体
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
+        }                    
+        
     }
 }
