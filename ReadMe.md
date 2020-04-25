@@ -5,3 +5,11 @@
 * WPF
 * Winform
 * ASP.NET
+
+
+## 其他
+
+
+* .NET扩展操作库：https://github.com/ShiJess/Jess.DotNet.Extension
+* WPF扩展控件库：https://github.com/ShiJess/Link.WPF.Toolkit
+* EF SQLite扩展库：https://github.com/ShiJess/Link.EntityFramework.Sqlite
