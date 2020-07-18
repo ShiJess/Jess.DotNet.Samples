@@ -1,0 +1,36 @@
+﻿syntax = "proto3";
+
+//package google.protobuf;
+//option csharp_namespace = "Jess.Sample.GoogleProtoBuf";
+
+//or
+
+package Jess.Sample.GoogleProtoBuf;
+
+message Test {
+     int32 ID = 1;
+     string Name = 2;
+}
+
+message TestComplex {
+     int32 ID = 1;
+     string Name = 2;
+
+     string Str = 3;
+     string Str_Req=4;
+
+     bool Is_True=5;
+     bool Is_True_Req=6;
+
+     TestEnumType TestEnum=7;
+     TestEnumType TestEnum_Req=8;
+}
+
+
+
+enum TestEnumType {
+    First = 0;
+    Second = 1;
+    Third = 2;
+}
+    
